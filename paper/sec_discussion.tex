@@ -1,0 +1,18 @@
+\textbf{Renaming is not free here.} Stripping \texttt{TMFxxx} and snake-casing
+the operation leaves 293 of 1,062 tools (27.6\,\%) sharing a name. We resolve
+collisions with a domain token from the API title, which reintroduces what
+renaming was meant to remove and still leaves five same-API collisions.
+
+\textbf{Scoring severity is easy to get wrong.} Our first version of
+$c_{\mathrm{sev}}$ charged unresolvable outputs at read severity, which ranked
+the two 0\,\%-accuracy baselines as the safest systems we measured. Any
+severity metric over free-form tool names has to price what the model
+\emph{asked for}, not only what it successfully named.
+
+\textbf{Limitations.} Queries are model-written from the specifications, which
+if anything favours the retrievers; the confusability rule is a declared
+lexical heuristic, not semantic ground truth; all models are laptop-scale, and
+a frontier selector may discriminate better; and we evaluate single-call
+selection only.
+
+

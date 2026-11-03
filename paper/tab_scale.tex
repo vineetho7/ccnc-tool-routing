@@ -1,0 +1,15 @@
+\begin{table}[t]
+\caption{Top-1 accuracy (\%) versus catalogue size. `--' = not run (prompt exceeds the practical context budget).}
+\label{tab:scale}
+\centering\footnotesize
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Method & 25 & 50 & 100 & 200 & 400 & 800 & 1062 \\
+\midrule
+Full schemas & 94.3 & 92.1 & -- & 77.8 & -- & -- & -- \\
+Dense top-5 & 93.8 & 89.5 & 82.1 & 74.0 & 65.6 & 55.8 & 54.2 \\
+Router 1.7B (LoRA) & 30.8 & 30.8 & 30.8 & 30.8 & 30.8 & 30.8 & 30.8 \\
+Hybrid (router $\cup$ dense-5) & -- & -- & -- & -- & -- & -- & 62.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

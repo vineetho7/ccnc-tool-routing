@@ -1,0 +1,96 @@
+\subsection{The selector amplifies the penalty it inherits}
+Table~\ref{tab:main} gives end-to-end selection. Retrieval into a five-tool
+candidate set followed by the 8B selector reaches 54.2\,\% top-1 on the full
+1,062-tool catalogue, against a top-5 recall ceiling of 61.1\,\%. The
+interesting quantity is how much of that ceiling each subgroup converts.
+Conditioned on the gold tool being present in the candidate set, the selector
+picks it 95.7\,\% of the time for distinct tools but only 80.3\,\% of the time
+for confusable ones. The confusable/distinct gap therefore \emph{grows} from
+12.9 points at the retrieval stage to 20.8 points end-to-end: the selector does
+not absorb the ambiguity that retrieval passes to it, it adds to it.
+
+This is not an artefact of retrieval. With BM25 candidates the end-to-end gap
+is 32.8 points (38.7 vs 71.5), tracking that retriever's larger recall gap;
+and removing the candidate bottleneck entirely does not close it. At $N=200$, putting \emph{every} schema in
+the prompt raises overall accuracy from 74.0\,\% to 77.8\,\%, but the entire
+gain lands on distinct tools (79.7 $\rightarrow$ 85.0); accuracy on confusable
+tools is identical to the decimal (58.4 vs 58.4), bought with 4,536 prompt
+tokens instead of 211 and 22.8\,s per query instead of 1.1\,s. Twenty-one times the context bought no improvement where the problem is.
+We do not claim the distinguishing information is absent from the schema text;
+what we measure is that our selector did not exploit it, and that supplying
+more of it did not help. Retrieval, usually framed as trading accuracy for
+cost, gave up nothing on the confusable subset in our setup.
+
+\subsection{Renaming does not transfer to a standardised catalogue}
+PA-Tool-style renaming is the cheapest published remedy for small-model tool
+errors~\cite{patool}, and on this catalogue it does not help: 53.2\,\% against
+54.2\,\% for the same pipeline with native names, with the confusable subgroup
+essentially unchanged (42.9 vs 43.9). The mechanism is visible in the
+catalogue itself. Stripping the \texttt{TMFxxx} prefix and snake-casing the
+operation makes 293 of 1,062 tools (27.6\,\%) share a name with at least
+one other tool, because the standards code \emph{is} the disambiguator between
+sibling APIs. Renaming either collides or must re-encode the same information as a domain
+prefix, so in our setup pretraining-aligned naming had nothing left to add.
+
+\subsection{Tool knowledge has to be trained in, and it is size-invariant}
+In the description-free setting (no schemas in the prompt, roughly 90 tokens) the 8B reasoning model scores 0.2\,\% and the untuned 1.7B scores 0.0\,\%.
+Neither can name a TM~Forum operation from pretraining. A LoRA adapter trained
+only on template-generated request/tool pairs lifts the 1.7B to 30.8\,\% at
+0.30\,s per query; a shorter 300-step run reaches 24.6\,\%, so the recipe is
+not saturated at the budget we could afford. The comparison that matters is
+not 30.8 against 54.2 but the shape of the curves (Fig.~\ref{fig:retr}):
+the router never sees the catalogue, so its accuracy is constant in $N$ by
+construction, while the retrieval pipeline falls from 93.8\,\% at $N=25$ to
+54.2\,\% at $N=1062$. At full scale the router alone already matches dense
+retrieval's top-1 recall (30.8 vs 32.5) without an index.
+
+It is not, however, safe to let it act. Only 43\,\% of its outputs name an
+operation that exists, and 22\,\% of queries end in a destructive call that
+was not requested ($c_{\mathrm{sev}} = 3.02$, against 1.66 for retrieval).
+A description-free router is a cheap \emph{proposer} of candidates and a bad
+executor; the accuracy number alone hides this completely.
+
+\subsection{The two signals are complementary}
+The hybrid raises accuracy from 54.2\,\% to 62.3\,\% ($+8.1$ points) at the
+full catalogue for three extra prompt tokens. The
+gain is concentrated where the problem is: confusable accuracy rises from
+43.9\,\% to 53.3\,\% ($+9.4$), and candidate recall from 61.1\,\% to
+69.5\,\%. The router contributes candidates that retrieval misses rather than
+reranking the ones it finds, and routing its proposal through a selector that
+can see schemas also repairs its safety profile: the hybrid's $c_{\mathrm{sev}}$
+is 1.43 and its dcall 9.8\,\%, both better than dense retrieval alone and far
+better than the router acting by itself. A domain-tuned router earns its cost
+as a \emph{recall} source at scale, not as a replacement selector; the weaker 300-step adapter already gave $+5.9$.
+
+\subsection{What a wrong tool is, and how to price it}
+Of the 192 errors the dense pipeline makes at $N=1062$, 138 name a real tool.
+Among those, 77.5\,\% keep the correct verb and 93.5\,\% the correct severity
+class, but only 18.1\,\% stay inside the correct API: \emph{right action,
+wrong object} is the dominant failure mode. Severity almost never escalates,
+so a ``did it escalate'' check reports a clean run; the damage is that 44 of
+those 138 errors substitute one \texttt{DELETE} for another on a different
+entity. We therefore report \emph{dcall}, the share of queries ending in a
+destructive call the request did not ask for: 10.5\,\% for dense top-5.
+
+Scoring this correctly matters. Charging unresolved outputs at read severity, the obvious default, makes the two 0\,\%-accuracy baselines the
+safest-looking systems in the table. Once a model emitting
+\texttt{TMF630\_\allowbreak removeWorkOrder} is charged for having asked for a deletion
+whether or not that operation exists, the ordering inverts: $c_{\mathrm{sev}}$
+is 6.78 for the untuned router and 4.51 for the schema-free 8B, against 1.66
+for dense retrieval and 1.43 for the hybrid.
+
+\smallskip\noindent\textbf{Arguments fail independently.} With the correct tool supplied, the selector names the right parameters almost always (key precision 94.6\,\%,
+recall 98.7\,\%) but gets every value right in only 58.7\,\% of calls
+(per-value exact match 77.3\,\%). Composed with selection at the full
+catalogue, a complete correct call lands at roughly 32\,\%. Arguments are thus a failure source of comparable size to routing and largely
+independent of it, so a single blended ``tool-call accuracy'' would misattribute
+half the loss to the router.
+
+\subsection{Abstention, and why accuracy is the wrong headline}
+With the gold tool removed and \texttt{NONE} the only correct answer, the
+pipeline abstains correctly 29.1\,\% of the time, naming a wrong tool in seven cases out of ten, at the highest severity cost we measured (2.74).
+Abstention is worst where it matters: 21.7\,\% with confusers present against
+36.7\,\% without. A sibling operation is close enough to look like an answer.
+This mirrors the finding that replacing a router model with a retriever preserves
+selection quality but cannot provide abstention~\cite{ondevice_routing}, on a
+catalogue where close enough may be a \texttt{DELETE}.

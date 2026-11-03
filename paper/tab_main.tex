@@ -1,0 +1,21 @@
+\begin{table}[t]
+\caption{Tool selection. C/D = confusable/distinct accuracy; res = outputs naming a real tool; $c_{\mathrm{sev}}$ = mean severity-weighted error cost over all predictions, charging an unresolvable name by the operation class it requests; dcall = queries ending in an unrequested \texttt{DELETE}.}
+\label{tab:main}
+\centering\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Method & $N$ & Acc & C & D & res & $c_{\mathrm{sev}}$ & dcall \\
+\midrule
+Full schemas & 200 & 77.8 & 58.4 & 85.0 & 91 & 0.86 & 6.2 \\
+BM25 top-5 & 1062 & 54.9 & 38.7 & 71.5 & 74 & 1.02 & 4.8 \\
+Dense top-5 & 1062 & 54.2 & 43.9 & 64.7 & 87 & 1.66 & 10.5 \\
+\; + PA-Tool rename & 1062 & 53.2 & 42.9 & 63.8 & 86 & 1.73 & 11.0 \\
+No schemas (8B) & 1062 & 0.2 & 0.5 & 0.0 & 0 & 4.51 & 22.0 \\
+Router 1.7B, untuned & -- & 0.0 & 0.0 & 0.0 & 0 & 6.78 & 27.0 \\
+Router 1.7B, LoRA-1500 & -- & 30.8 & 25.9 & 35.7 & 43 & 3.02 & 22.0 \\
+\textbf{Hybrid} (router $\cup$ dense-5) & 1062 & 62.3 & 53.3 & 71.5 & 93 & 1.43 & 9.8 \\
+\bottomrule
+\end{tabular}}
+\end{table}

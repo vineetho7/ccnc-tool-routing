@@ -1,0 +1,19 @@
+Telecom management APIs are generated from shared information models, so a
+single operator stack exposes hundreds of operations whose names differ by one
+token while their effects differ completely. We harvest 1,062 tool
+definitions from 79 published TM~Forum Open API specifications and label
+confusability from the specifications alone, independently of any retriever:
+54.8\,\% of the catalogue has a sibling operation sharing its verb and
+most of its entity tokens. On 419 operator requests we compare full-schema
+prompting, dense and lexical retrieval, PA-Tool-style renaming, and a
+LoRA-tuned 1.7B router that sees no schemas at all. In a controlled within-query injection, confusers displace the gold tool from
+rank one ($-11.3$ points) but rarely out of the top five ($-2.8$): the failure
+moves from retrieval to discrimination, and the selector amplifies it,
+converting 95.7\,\% of retrieved distinct tools into correct answers against
+80.3\,\% of confusable ones. At $N=200$ full-schema prompting is no better than top-5 retrieval on
+confusable tools (58.4 both) despite 21$\times$ the tokens. Renaming does not help: the standards code is the disambiguator.
+The router's accuracy is invariant to catalogue size where retrieval's is not,
+and the two are complementary: their union gains 8.1 points at 1,062 tools,
+9.4 of them on confusable tools.
+Abstention is the weakest link: with the correct tool absent, the pipeline
+still names one 71\,\% of the time, worse when siblings are present.

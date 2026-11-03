@@ -1,0 +1,30 @@
+Everything runs locally on an Apple M4~Pro (24\,GB), so costs are tokens and
+latency, not prices. The selector is Qwen3.5 (8B class, 4-bit, ollama) with
+reasoning disabled; the router is Qwen3-1.7B~\cite{qwen3} (bf16, MLX)\@.
+Retrieval uses \texttt{nomic-embed-text}~\cite{nomic} and BM25 over one
+document per tool (name, method, path, API title, summary, parameters).
+Greedy decoding throughout.
+
+\textbf{Catalogue sizes.} For a query with gold tool $g$, the catalogue of
+size $N$ is $g$ plus $N-1$ distractors drawn deterministically with a per-query
+seed. Confusability is re-evaluated \emph{within} that subset: a trial is
+confusable if at least one confuser of $g$ is present.
+
+\textbf{Methods.} \texttt{full} places all $N$ schemas in the prompt;
+\texttt{dense5}/\texttt{bm25\_5} prompt with five retrieved candidates;
+\texttt{*\_rename} replaces \texttt{TMF633\_\allowbreak listServiceCatalog} with a
+pretraining-aligned \texttt{list\_service\_catalog}~\cite{patool};
+\texttt{direct} supplies no schemas. The routers are the 1.7B prompted
+description-free, the tuned one LoRA-adapted (rank 8, lr $10^{-4}$, 1,500
+steps) on 11,390 \emph{template-generated} pairs covering all 1,062 tools, with no model-written utterances, so the evaluation queries are out of distribution
+for the router by construction. \texttt{hybrid} is the union of the tuned
+router's single prediction with the dense top-5, scored by the same selector.
+
+\textbf{Metrics.} Top-1 accuracy, split confusable/distinct; candidate recall;
+severity-weighted error cost $c_{\mathrm{sev}}$ (a wrong answer costs 1, 3 or
+10 according to whether the \emph{chosen} tool is a read, a state-changing
+operation or a \texttt{DELETE}; a correct answer costs 0); mean prompt tokens and wall-clock.
+Abstention is a separate condition in which the gold tool is removed and
+\texttt{NONE} is the only correct answer. Argument generation is scored in a
+second stage conditioned on the gold tool, so a parameter error is never
+charged to the router.

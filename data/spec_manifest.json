@@ -1,0 +1,555 @@
+[
+ {
+  "repo": "TMF641_ServiceOrder",
+  "branch": "main",
+  "path": "TMF641-ServiceOrdering-v4.2.0.swagger.json",
+  "size": 303965,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF641_ServiceOrder__TMF641-ServiceOrdering-v4.2.0.swagger.json"
+ },
+ {
+  "repo": "TMF638_ServiceInventory",
+  "branch": "main",
+  "path": "TMF638-ServiceInventory-v4.0.0.swagger.json",
+  "size": 100403,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF638_ServiceInventory__TMF638-ServiceInventory-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF676_PaymentManagement",
+  "branch": "main",
+  "path": "TMF676-Payment-v4.0.0.swagger.json",
+  "size": 101491,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF676_PaymentManagement__TMF676-Payment-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF684_ShipmentTracking",
+  "branch": "main",
+  "path": "shipmentTracking_v10_Jan18_SwaggerValidatorPassed.json",
+  "size": 18769,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF684_ShipmentTracking__shipmentTracking_v10_Jan18_SwaggerValidatorPassed.json"
+ },
+ {
+  "repo": "TMF645_ServiceQualification",
+  "branch": "main",
+  "path": "TMF645-ServiceQualification-v4.0.0.swagger.json",
+  "size": 177714,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF645_ServiceQualification__TMF645-ServiceQualification-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF646_AppointmentManagement",
+  "branch": "main",
+  "path": "TMF646-Appointment-v4.0.0.swagger.json",
+  "size": 126386,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF646_AppointmentManagement__TMF646-Appointment-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF622_ProductOrder",
+  "branch": "main",
+  "path": "TMF622-ProductOrder-v4.0.0.swagger.json",
+  "size": 178579,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF622_ProductOrder__TMF622-ProductOrder-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF677_UsageConsumption",
+  "branch": "main",
+  "path": "TMF677-UsageConsumption-v4.0.1.swagger.json",
+  "size": 75401,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF677_UsageConsumption__TMF677-UsageConsumption-v4.0.1.swagger.json"
+ },
+ {
+  "repo": "TMF679_ProductOfferingQualification",
+  "branch": "main",
+  "path": "TMF679-ProductOfferingQualification-v4.0.0.swagger.json",
+  "size": 132395,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF679_ProductOfferingQualification__TMF679-ProductOfferingQualification-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF672_UserRolesPermissions",
+  "branch": "main",
+  "path": "TMF672_User_Role_Permission_Management_API_v4.0.0_swagger.json",
+  "size": 95578,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF672_UserRolesPermissions__TMF672_User_Role_Permission_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF674_GeographicSite",
+  "branch": "main",
+  "path": "TMF674-GeographicSite-v4.0.0.swagger.json",
+  "size": 65995,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF674_GeographicSite__TMF674-GeographicSite-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF678_CustomerBill",
+  "branch": "main",
+  "path": "TMF678-CustomerBill-v4.0.0.swagger.json",
+  "size": 84644,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF678_CustomerBill__TMF678-CustomerBill-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF635_UsageManagement",
+  "branch": "main",
+  "path": "TMF635-UsageManagement-v4.0.0.swagger.json",
+  "size": 147992,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF635_UsageManagement__TMF635-UsageManagement-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF629_CustomerManagement",
+  "branch": "main",
+  "path": "TMF629-Customer-v4.0.0.swagger.json",
+  "size": 71789,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF629_CustomerManagement__TMF629-Customer-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF666_AccountManagement",
+  "branch": "main",
+  "path": "TMF666-Account-v4.0.0.swagger.json",
+  "size": 271883,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF666_AccountManagement__TMF666-Account-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF651_AgreementManagement",
+  "branch": "main",
+  "path": "TMF651-Agreement-v4.0.0.swagger.json",
+  "size": 137445,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF651_AgreementManagement__TMF651-Agreement-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF669_PartyRole",
+  "branch": "main",
+  "path": "TMF669-PartyRole-v4.0.0.swagger.json",
+  "size": 71542,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF669_PartyRole__TMF669-PartyRole-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF668_PartnershipType",
+  "branch": "main",
+  "path": "TMF668-PartnershipType-v4.0.0.swagger.json",
+  "size": 112207,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF668_PartnershipType__TMF668-PartnershipType-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF653_ServiceTestManagement",
+  "branch": "main",
+  "path": "TMF653_Service_Test_Management_API_v4.2.0_swagger.json",
+  "size": 171602,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF653_ServiceTestManagement__TMF653_Service_Test_Management_API_v4.2.0_swagger.json"
+ },
+ {
+  "repo": "TMF655_ChangeManagement",
+  "branch": "main",
+  "path": "TMF655_Change_Management_API_v4.0.0_swagger.json",
+  "size": 128464,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF655_ChangeManagement__TMF655_Change_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF657_ServiceQualityManagement",
+  "branch": "main",
+  "path": "TMF657-ServiceQualityManagement-v4.0.0.swagger.json",
+  "size": 97685,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF657_ServiceQualityManagement__TMF657-ServiceQualityManagement-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF671_Promotion",
+  "branch": "main",
+  "path": "TMF671-Promotion-v4.0.0.swagger.json",
+  "size": 68140,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF671_Promotion__TMF671-Promotion-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF680_Recommendation",
+  "branch": "main",
+  "path": "TMF680_Recommendation_Management_API_v4.0.0_swagger.json",
+  "size": 98069,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF680_Recommendation__TMF680_Recommendation_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF681_Communication",
+  "branch": "main",
+  "path": "TMF681-Communication-v4.0.0.swagger.json",
+  "size": 50704,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF681_Communication__TMF681-Communication-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF691_FederatedIdentity",
+  "branch": "main",
+  "path": "TMF691-FederatedIdentity-v4.0.0.swagger.json",
+  "size": 51237,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF691_FederatedIdentity__TMF691-FederatedIdentity-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF632_PartyManagement",
+  "branch": "main",
+  "path": "TMF632_Party_Management_API_v4.0.0_swagger.json",
+  "size": 160515,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF632_PartyManagement__TMF632_Party_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF675_GeographicLocation",
+  "branch": "main",
+  "path": "GeographicLocation.regular.swagger.json",
+  "size": 45103,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF675_GeographicLocation__GeographicLocation.regular.swagger.json"
+ },
+ {
+  "repo": "TMF673_GeographicAddress",
+  "branch": "main",
+  "path": "GeographicAddress_Management.regular.swagger.json",
+  "size": 67780,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF673_GeographicAddress__GeographicAddress_Management.regular.swagger.json"
+ },
+ {
+  "repo": "TMF648_QuoteManagement",
+  "branch": "main",
+  "path": "TMF648-Quote-v4.0.0.swagger.json",
+  "size": 151129,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF648_QuoteManagement__TMF648-Quote-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF620_ProductCatalog",
+  "branch": "main",
+  "path": "TMF620-ProductCatalog-v4.1.0.swagger.json",
+  "size": 399100,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF620_ProductCatalog__TMF620-ProductCatalog-v4.1.0.swagger.json"
+ },
+ {
+  "repo": "TMF633_ServiceCatalog",
+  "branch": "main",
+  "path": "TMF633-ServiceCatalog-v4.0.0.swagger.json",
+  "size": 267646,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF633_ServiceCatalog__TMF633-ServiceCatalog-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF637_ProductInventory",
+  "branch": "main",
+  "path": "TMF637-ProductInventory-v4.0.0.swagger.json",
+  "size": 111692,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF637_ProductInventory__TMF637-ProductInventory-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF662_EntityCatalog",
+  "branch": "main",
+  "path": "TMF662-EntityCatalog-v4.0.0.swagger.json",
+  "size": 294780,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF662_EntityCatalog__TMF662-EntityCatalog-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF634_ResourceCatalog",
+  "branch": "main",
+  "path": "TMF634-ResourceCatalog-v4.1.0.swagger.json",
+  "size": 308554,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF634_ResourceCatalog__TMF634-ResourceCatalog-v4.1.0.swagger.json"
+ },
+ {
+  "repo": "TMF658_LoyaltyManagement",
+  "branch": "main",
+  "path": "Loyalty_Management.admin.swagger.json",
+  "size": 104347,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF658_LoyaltyManagement__Loyalty_Management.admin.swagger.json"
+ },
+ {
+  "repo": "TMF621_TroubleTicket",
+  "branch": "main",
+  "path": "TMF621-TroubleTicket-v4.0.0.swagger.json",
+  "size": 95441,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF621_TroubleTicket__TMF621-TroubleTicket-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF663_ShoppingCart",
+  "branch": "main",
+  "path": "TMF663-ShoppingCart-v4.0.0.swagger.json",
+  "size": 111587,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF663_ShoppingCart__TMF663-ShoppingCart-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF683_PartyInteraction",
+  "branch": "main",
+  "path": "TMF683-PartyInteraction-v4.0.0.swagger.json",
+  "size": 79318,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF683_PartyInteraction__TMF683-PartyInteraction-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF670_PaymentMethods",
+  "branch": "main",
+  "path": "TMF670_Payment_Method_Management_API_v4.0.0_swagger.json",
+  "size": 84262,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF670_PaymentMethods__TMF670_Payment_Method_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF639_ResourceInventory",
+  "branch": "main",
+  "path": "TMF639-ResourceInventory-v4.0.0.swagger.json",
+  "size": 131765,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF639_ResourceInventory__TMF639-ResourceInventory-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF652_ResourceOrderManagement",
+  "branch": "main",
+  "path": "TMF652_Resource_Order_Management_API_v4.0.0_swagger.json",
+  "size": 115299,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF652_ResourceOrderManagement__TMF652_Resource_Order_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF685_ResourcePool",
+  "branch": "main",
+  "path": "Resource_Pool_Management.admin.swagger.json",
+  "size": 69221,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF685_ResourcePool__Resource_Pool_Management.admin.swagger.json"
+ },
+ {
+  "repo": "TMF654_PrepayBalanceManagement",
+  "branch": "main",
+  "path": "TMF654_Prepay_Balance_Management_API_v4.0.0_swagger.json",
+  "size": 253819,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF654_PrepayBalanceManagement__TMF654_Prepay_Balance_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF656_ServiceProblemManagement",
+  "branch": "main",
+  "path": "TMF656-ServiceProblem-v4.0.0.swagger.json",
+  "size": 141434,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF656_ServiceProblemManagement__TMF656-ServiceProblem-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF640_ActivationConfiguration",
+  "branch": "main",
+  "path": "TMF640-ServiceActivation-v4.0.0.swagger.json",
+  "size": 143866,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF640_ActivationConfiguration__TMF640-ServiceActivation-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF699_Sales",
+  "branch": "main",
+  "path": "TMF699-Sales-v4.0.0.swagger.json",
+  "size": 85085,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF699_Sales__TMF699-Sales-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF701_ProcessFlow",
+  "branch": "main",
+  "path": "TMF701-ProcessFlow-v4.0.0.swagger.json",
+  "size": 102738,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF701_ProcessFlow__TMF701-ProcessFlow-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF909_NaaSComponentSuite",
+  "branch": "main",
+  "path": "TMF909-NetworkasaService-v3.0.0.swagger.json",
+  "size": 549733,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF909_NaaSComponentSuite__TMF909-NetworkasaService-v3.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF644_Privacy",
+  "branch": "main",
+  "path": "TMF644_Privacy_Management_API_v4.0.0_swagger.json",
+  "size": 197936,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF644_Privacy__TMF644_Privacy_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF667_Document",
+  "branch": "main",
+  "path": "TMF667_Document_Management_API_v4.0.0_swagger.json",
+  "size": 159543,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF667_Document__TMF667_Document_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF702-ResourceActivationConfiguration",
+  "branch": "master",
+  "path": "TMF702-ResourceActivation-v4.0.0.swagger.json",
+  "size": 102736,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF702-ResourceActivationConfiguration__TMF702-ResourceActivation-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF688-Event",
+  "branch": "master",
+  "path": "TMF688-Event-v4.0.0.swagger.json",
+  "size": 57151,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF688-Event__TMF688-Event-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF908_IoTAgentAndDeviceComponentSuite",
+  "branch": "main",
+  "path": "TMF908-IoTAgentAndDevice-v4.0.0.swagger.json",
+  "size": 265591,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF908_IoTAgentAndDeviceComponentSuite__TMF908-IoTAgentAndDevice-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF704_TestCase",
+  "branch": "main",
+  "path": "TMF704-TestCase-v4.0.0.swagger.json",
+  "size": 182593,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF704_TestCase__TMF704-TestCase-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF705_TestEnvironment",
+  "branch": "main",
+  "path": "TMF705-TestEnvironment-v4.0.0.swagger.json",
+  "size": 235255,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF705_TestEnvironment__TMF705-TestEnvironment-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF706_TestData",
+  "branch": "main",
+  "path": "TMF706-TestData-v4.0.0.swagger.json",
+  "size": 133683,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF706_TestData__TMF706-TestData-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF707_TestResult",
+  "branch": "main",
+  "path": "TMF707-TestResult-v4.0.0.swagger.json",
+  "size": 172714,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF707_TestResult__TMF707-TestResult-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF708_TestExecution",
+  "branch": "main",
+  "path": "TMF708-TestExecution-v4.0.0.swagger.json",
+  "size": 193913,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF708_TestExecution__TMF708-TestExecution-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF709_TestScenario",
+  "branch": "main",
+  "path": "TMF709-TestScenario-v4.0.0.swagger.json",
+  "size": 83398,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF709_TestScenario__TMF709-TestScenario-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF710_GeneralTestArtifact",
+  "branch": "main",
+  "path": "TMF710_General_Test_Artifact_Management_API_v4.0.0_swagger.json",
+  "size": 86039,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF710_GeneralTestArtifact__TMF710_General_Test_Artifact_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF642_AlarmManagement",
+  "branch": "main",
+  "path": "TMF642-Alarm-v4.0.0.swagger.json",
+  "size": 237116,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF642_AlarmManagement__TMF642-Alarm-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF664_ResourceFunctionActivationConfiguration",
+  "branch": "main",
+  "path": "TMF664_Resource_Function_Activation_Management_API_v4.0.0_swagger.json",
+  "size": 271724,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF664_ResourceFunctionActivationConfiguration__TMF664_Resource_Function_Activation_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF696_RiskManagement",
+  "branch": "main",
+  "path": "TMF696-RiskManagement-v4.0.0.swagger.json",
+  "size": 189382,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF696_RiskManagement__TMF696-RiskManagement-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF703_EntityInventory",
+  "branch": "main",
+  "path": "TMF703-EntityInventory-v4.0.0.swagger.json",
+  "size": 110913,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF703_EntityInventory__TMF703-EntityInventory-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF915_AIManagementSuite",
+  "branch": "main",
+  "path": "TMF915-AIManagement-v4.0.0.swagger.json",
+  "size": 565161,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF915_AIManagementSuite__TMF915-AIManagement-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF910_SelfCareComponentSuite",
+  "branch": "main",
+  "path": "TMF910-SelfCare-v1.0.0.swagger.json",
+  "size": 192087,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF910_SelfCareComponentSuite__TMF910-SelfCare-v1.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF687_StockManagement",
+  "branch": "main",
+  "path": "TMF687-Stock-v4.0.0.swagger.json",
+  "size": 291773,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF687_StockManagement__TMF687-Stock-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF628_Performance",
+  "branch": "main",
+  "path": "TMF628-Performance-v4.0.0.swagger.json",
+  "size": 216919,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF628_Performance__TMF628-Performance-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF914_IoTServiceComponentSuite",
+  "branch": "main",
+  "path": "TMF914-IotService-v4.0.0.swagger.json",
+  "size": 718580,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF914_IoTServiceComponentSuite__TMF914-IotService-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF700_ShippingOrder",
+  "branch": "main",
+  "path": "TMF700-ShippingOrder-v4.0.0.swagger.json",
+  "size": 219738,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF700_ShippingOrder__TMF700-ShippingOrder-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF720_DigitalIdentity",
+  "branch": "main",
+  "path": "TMF720_Digital_Identity_Management_API_v4.0.0_swagger.json",
+  "size": 94747,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF720_DigitalIdentity__TMF720_Digital_Identity_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF697_Work_Order",
+  "branch": "main",
+  "path": "TMF697-WorkOrder-v4.0.0.swagger.json",
+  "size": 207142,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF697_Work_Order__TMF697-WorkOrder-v4.0.0.swagger.json"
+ },
+ {
+  "repo": "TMF921_Intent",
+  "branch": "main",
+  "path": "TMF921_Intent_Management_API_v4.0.0_swagger.json",
+  "size": 100828,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF921_Intent__TMF921_Intent_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF702_ResourceActivationManagement",
+  "branch": "main",
+  "path": "TMF702_Resource_Activation_Management_API_v4.0.0_swagger.json",
+  "size": 133481,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF702_ResourceActivationManagement__TMF702_Resource_Activation_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF716_ResourceReservation",
+  "branch": "main",
+  "path": "TMF716_ResourceReservation_v4.0.0_swagger.json",
+  "size": 172820,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF716_ResourceReservation__TMF716_ResourceReservation_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF724_IncidentManagement",
+  "branch": "main",
+  "path": "TMF724_Incident_Management_API_v4.0.0_swagger.json",
+  "size": 108367,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF724_IncidentManagement__TMF724_Incident_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF730_SoftwareAndComputeManagement",
+  "branch": "main",
+  "path": "TMF730_Software_And_Compute_Management_API_v4.0.0_swagger.json",
+  "size": 311820,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF730_SoftwareAndComputeManagement__TMF730_Software_And_Compute_Management_API_v4.0.0_swagger.json"
+ },
+ {
+  "repo": "TMF931_OpenGatewayOnboardingAndOrderingComponentSuite",
+  "branch": "main",
+  "path": "TMF931-Open_Gateway_Operate_API_Onboarding_and_Ordering-v5.2.1.oas.yaml",
+  "size": 395479,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF931_OpenGatewayOnboardingAndOrderingComponentSuite__TMF931-Open_Gateway_Operate_API_Onboarding_and_Ordering-v5.2.1.oas.yaml"
+ },
+ {
+  "repo": "TMF936_OperateProductCatalog",
+  "branch": "main",
+  "path": "TMF936-Open_Gateway_Operate_API_-_Product_Catalog-v5.0.0.oas.yaml",
+  "size": 115958,
+  "local": "/Users/vineeth/Documents/ccnc-tool-routing/data/specs/TMF936_OperateProductCatalog__TMF936-Open_Gateway_Operate_API_-_Product_Catalog-v5.0.0.oas.yaml"
+ }
+]

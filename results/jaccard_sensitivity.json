@@ -1,0 +1,38 @@
+[
+ {
+  "thr": 0.3,
+  "conf_tools_pct": 66.9,
+  "n_conf_q": 259,
+  "acc_conf": 52.9,
+  "n_dist_q": 161,
+  "acc_dist": 80.1,
+  "gap": 27.2
+ },
+ {
+  "thr": 0.5,
+  "conf_tools_pct": 54.8,
+  "n_conf_q": 201,
+  "acc_conf": 47.8,
+  "n_dist_q": 219,
+  "acc_dist": 77.6,
+  "gap": 29.8
+ },
+ {
+  "thr": 0.7,
+  "conf_tools_pct": 27.9,
+  "n_conf_q": 93,
+  "acc_conf": 22.6,
+  "n_dist_q": 327,
+  "acc_dist": 74.9,
+  "gap": 52.3
+ },
+ {
+  "thr": 0.9,
+  "conf_tools_pct": 27.9,
+  "n_conf_q": 93,
+  "acc_conf": 22.6,
+  "n_dist_q": 327,
+  "acc_dist": 74.9,
+  "gap": 52.3
+ }
+]

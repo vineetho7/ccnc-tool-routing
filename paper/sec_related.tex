@@ -1,0 +1,13 @@
+Retrieving a small candidate set before prompting is the established answer to
+catalogue growth~\cite{ragmcp,toollery}, so full-schema prompting is a
+historical baseline and dense retrieval the method to beat. Conversely, tool
+knowledge can be internalised by fine-tuning so the prompt carries no schemas,
+shown on an industrial asset-operations catalogue~\cite{qlora_tools}; and
+substituting a retriever for a router model is reported to preserve selection
+but not abstention~\cite{ondevice_routing}. PA-Tool argues no training is
+needed, since small-model tool errors are dominated by schema names that do not
+match pretraining~\cite{patool}. We include all three positions. Telecom agent
+benchmarks evaluate troubleshooting over small curated tool
+sets~\cite{telcoagent,ctbench}, and WirelessBench argues for tolerance-aware
+scoring because flat accuracy hides catastrophic errors~\cite{wirelessbench};
+we adopt that argument for routing, on a far larger catalogue.

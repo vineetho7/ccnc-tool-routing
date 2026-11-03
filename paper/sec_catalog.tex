@@ -1,0 +1,35 @@
+\subsection{Harvesting}
+We cloned the published OpenAPI/Swagger documents of the TM~Forum Open API
+suite~\cite{tmforum} and flattened every \texttt{operationId} into one tool,
+keeping its HTTP method, path, summary, description and parameter list. This
+yields 1,891 operations. We then remove notification plumbing
+(\texttt{/listener/*} callbacks and \texttt{/hub} subscription endpoints),
+which is
+mechanically duplicated across every API and would inflate both the catalogue
+size and the confusability rate. The resulting catalogue has \textbf{1,062
+tools over 79 APIs}: 497 reads, 386 state-changing (POST/PUT/PATCH) and
+179 destructive (\texttt{DELETE}) operations.
+
+\subsection{Confusability}
+Labelling confusability with an embedding model would make the label a function
+of the system under test. We therefore define it on the specifications only.
+Two tools $a,b$ are confusable if they share an HTTP method and an operation
+verb, belong to \emph{different} APIs, and their entity-token sets satisfy
+$J(a,b)=|E_a\cap E_b|/|E_a\cup E_b|\ge 0.5$, where $E$ is the camel-case split
+of the \texttt{operationId} with the leading verb removed. A tool is confusable
+if at least one such partner exists. By this rule \textbf{582 of
+1,062 tools (54.8\,\%)} are confusable: the phenomenon is native
+to the standard, not constructed for the experiment. One representative family: \texttt{TMF620\_\allowbreak listCatalog} (product catalogue),
+\texttt{TMF633\_\allowbreak listServiceCatalog}, \texttt{TMF634\_\allowbreak listResourceCatalog},
+\texttt{TMF662\_\allowbreak listEntityCatalog} and \texttt{TMF909\_\allowbreak listServiceCatalog}
+are five distinct endpoints in five distinct APIs.
+
+
+
+\subsection{Queries}
+For a stratified sample over (confusable $\times$ severity), capped at four
+tools per API, a local instruction model writes one operator utterance per
+tool from the API title, summary and required parameters. Automated gates
+reject any utterance leaking the \texttt{operationId}, naming a domain owned
+by a different API, or naming its own API title or TMF code. This yields
+\textbf{419 queries} with a gold tool and gold arguments.

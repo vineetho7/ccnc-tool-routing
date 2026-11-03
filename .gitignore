@@ -1,0 +1,18 @@
+# local python env
+.venv/
+__pycache__/
+*.pyc
+
+# intermediate LoRA checkpoints (final weights live in adapters/)
+adapters_long/
+
+# macOS
+.DS_Store
+
+# latex build noise
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz

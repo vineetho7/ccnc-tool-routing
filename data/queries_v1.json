@@ -1,0 +1,5879 @@
+[
+ {
+  "qid": "q0000",
+  "query": "Create a service test specification for the IoT gateway onboarding workflow using the automated signal integrity check.",
+  "gold_tool": "TMF914_createServiceTestSpecification",
+  "gold_api": "TMF914",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 8,
+  "gold_args": {
+   "serviceTestSpecification": "automated signal integrity check"
+  }
+ },
+ {
+  "qid": "q0001",
+  "query": "Get the user profile for customer ID 89402.",
+  "gold_tool": "TMF691_retrieveUserinfo",
+  "gold_api": "TMF691",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "Authorization": "Bearer secret-token-xyz",
+   "id": "89402"
+  }
+ },
+ {
+  "qid": "q0002",
+  "query": "Remove the work order for provisioning a failed fiber repair ticket identified by ID WO-99821.",
+  "gold_tool": "TMF697_deleteWorkOrder",
+  "gold_api": "TMF697",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "WO-99821"
+  }
+ },
+ {
+  "qid": "q0003",
+  "query": "Update service order SO-998812 to mark provisioning status as 'completed' in the service catalog.",
+  "gold_tool": "TMF641_patchServiceOrder",
+  "gold_api": "TMF641",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "SO-998812",
+   "serviceOrder": {
+    "provisioningStatus": "completed"
+   }
+  }
+ },
+ {
+  "qid": "q0004",
+  "query": "Show me unacknowledged alarms for the primary core router starting from offset zero with a limit of ten results.",
+  "gold_tool": "TMF642_listUnAckAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "offset": "0",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0005",
+  "query": "Retrieve the first 50 service specification entries from the global service catalog.",
+  "gold_tool": "TMF909_listServiceSpecification",
+  "gold_api": "TMF909",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 8,
+  "gold_args": {
+   "fields": [
+    "id",
+    "name"
+   ],
+   "offset": 0,
+   "limit": 50
+  }
+ },
+ {
+  "qid": "q0006",
+  "query": "Remove the completed test environment allocation execution for ID 'EXEC-9928' from the service catalog.",
+  "gold_tool": "TMF708_deleteTestEnvironmentAllocationExecution",
+  "gold_api": "TMF708",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "EXEC-9928"
+  }
+ },
+ {
+  "qid": "q0007",
+  "query": "Retrieve usage specification details for service catalog ID 9050 with fields billing and quota, offset 0, limit 20.",
+  "gold_tool": "TMF635_listUsageSpecification",
+  "gold_api": "TMF635",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": [
+    "billing",
+    "quota"
+   ],
+   "offset": 0,
+   "limit": 20
+  }
+ },
+ {
+  "qid": "q0008",
+  "query": "Query usage consumption for service catalog identifier SVC-9001 during last quarter.",
+  "gold_tool": "TMF677_createQueryUsageConsumption",
+  "gold_api": "TMF677",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "queryUsageConsumption": {
+    "serviceCatalogRef": "SVC-9001",
+    "periodStart": "2023-10-01",
+    "periodEnd": "2023-12-31"
+   }
+  }
+ },
+ {
+  "qid": "q0009",
+  "query": "Get the configuration details for task flow abc-123 within process flow order-creation.",
+  "gold_tool": "TMF701_retrieveTaskFlow",
+  "gold_api": "TMF701",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "processFlowId": "order-creation",
+   "id": "abc-123"
+  }
+ },
+ {
+  "qid": "q0010",
+  "query": "Remove import job 48291 from the service catalog after the failed data migration.",
+  "gold_tool": "TMF633_deleteImportJob",
+  "gold_api": "TMF633",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "48291"
+  }
+ },
+ {
+  "qid": "q0011",
+  "query": "Remove the privacy specification for party ID 'ACME-CORP-US' from our service catalog.",
+  "gold_tool": "TMF644_deletePartyPrivacyProfileSpecification",
+  "gold_api": "TMF644",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "ACME-CORP-US"
+  }
+ },
+ {
+  "qid": "q0012",
+  "query": "Retrieve details for billing account 987654321 with a limit of 50 results.",
+  "gold_tool": "TMF666_listBillingAccount",
+  "gold_api": "TMF666",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": "50",
+   "fields": "id,accountNumber,balance,status",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0013",
+  "query": "Get details for retrieve location relation ID REL-9876 to verify its geographic mapping status.",
+  "gold_tool": "TMF675_retrieveLocationRelationGet",
+  "gold_api": "TMF675",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "retrieveLocationRelationId": "REL-9876"
+  }
+ },
+ {
+  "qid": "q0014",
+  "query": "Remove the TestCaseExecution record for test run ID TR-9988 from the service catalog.",
+  "gold_tool": "TMF708_deleteTestCaseExecution",
+  "gold_api": "TMF708",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TR-9988"
+  }
+ },
+ {
+  "qid": "q0015",
+  "query": "Create a new product named 'UltraConnect-Broadband' in the service catalog with category 'Fixed Internet'.",
+  "gold_tool": "TMF637_createProduct",
+  "gold_api": "TMF637",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "name": "UltraConnect-Broadband"
+  }
+ },
+ {
+  "qid": "q0016",
+  "query": "Create a new service test named '5G-Beta-Roaming' to validate roaming handover procedures in the service catalog.",
+  "gold_tool": "TMF653_createServiceTest",
+  "gold_api": "TMF653",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "name": "5G-Beta-Roaming"
+  }
+ },
+ {
+  "qid": "q0017",
+  "query": "Add a comment to alarm ID 123456 stating 'Investigating false positive due to sensor drift'.",
+  "gold_tool": "TMF642_createCommentAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "commentAlarms": "Investigating false positive due to sensor drift"
+  }
+ },
+ {
+  "qid": "q0018",
+  "query": "Remove the specific resource record for equipment ID 'EQ-8920-X' from our service catalog inventory.",
+  "gold_tool": "TMF639_deleteResource",
+  "gold_api": "TMF639",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 13,
+  "gold_args": {
+   "id": "EQ-8920-X"
+  }
+ },
+ {
+  "qid": "q0019",
+  "query": "Retrieve the first 50 comment alarms for the core router service catalog using offset 0.",
+  "gold_tool": "TMF642_listCommentAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": "50",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0020",
+  "query": "Update sales lead ID SL-9940 to include a new bundled voice and data plan in its service offering.",
+  "gold_tool": "TMF699_patchSalesLead",
+  "gold_api": "TMF699",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SL-9940",
+   "salesLead": "new bundled voice and data plan"
+  }
+ },
+ {
+  "qid": "q0021",
+  "query": "Give me the latest five network alarms starting from offset zero.",
+  "gold_tool": "TMF915_listAlarm",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "fields": [
+    "id",
+    "severity",
+    "description"
+   ],
+   "offset": "0",
+   "limit": "5"
+  }
+ },
+ {
+  "qid": "q0022",
+  "query": "Update the priority of nonFunctionalTestModel id 'NFST-902' to 'high' for the service catalog.",
+  "gold_tool": "TMF704_patchNonFunctionalTestModel",
+  "gold_api": "TMF704",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "NFST-902",
+   "nonFunctionalTestModel": {
+    "priority": "high"
+   }
+  }
+ },
+ {
+  "qid": "q0023",
+  "query": "Remove service catalog item with ID 89754 that references the deprecated legacy billing policy.",
+  "gold_tool": "TMF662_deleteEntityCatalogItem",
+  "gold_api": "TMF662",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "89754"
+  }
+ },
+ {
+  "qid": "q0024",
+  "query": "Update the service catalog entry for ID 9847 to enable the new roaming partner settings.",
+  "gold_tool": "TMF702_patchResource",
+  "gold_api": "TMF702",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 15,
+  "gold_args": {
+   "id": "9847",
+   "resource": {
+    "name": "roamingPartnerSettings",
+    "value": true
+   }
+  }
+ },
+ {
+  "qid": "q0025",
+  "query": "Update the 'Global Service Catalog' (id: GSC-8092) to include the new 5G slice definition in the entity list.",
+  "gold_tool": "TMF662_patchEntityCatalog",
+  "gold_api": "TMF662",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "GSC-8092",
+   "entityCatalog": {
+    "name": "5G Slice Definition",
+    "type": "sliceType",
+    "description": "Updated definition for network slicing."
+   }
+  }
+ },
+ {
+  "qid": "q0026",
+  "query": "Create a new product offering price of $10.00 per month for the broadband service package.",
+  "gold_tool": "TMF620_createProductOfferingPrice",
+  "gold_api": "TMF620",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productOfferingPrice": "$10.00 per month"
+  }
+ },
+ {
+  "qid": "q0027",
+  "query": "Get usage consumption details for query ID QUC-998876.",
+  "gold_tool": "TMF677_retrieveQueryUsageConsumption",
+  "gold_api": "TMF677",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "QUC-998876"
+  }
+ },
+ {
+  "qid": "q0028",
+  "query": "Provision a new ResourceFunction named 'CoreNetworkScaler' in the service catalog to handle peak traffic loads.",
+  "gold_tool": "TMF664_createResourceFunction",
+  "gold_api": "TMF664",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "resourceFunction": "CoreNetworkScaler"
+  }
+ },
+ {
+  "qid": "q0029",
+  "query": "Delete the agreement specification with ID 'SPEC-994820' from our service catalog.",
+  "gold_tool": "TMF651_deleteAgreementSpecification",
+  "gold_api": "TMF651",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SPEC-994820"
+  }
+ },
+ {
+  "qid": "q0030",
+  "query": "Remove serviceQualification with ID SVC-Q-7890 from the service catalog.",
+  "gold_tool": "TMF909_deleteServiceQualification",
+  "gold_api": "TMF909",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "SVC-Q-7890"
+  }
+ },
+ {
+  "qid": "q0031",
+  "query": "What is the current stock level for service catalog product with ID PROD-9942?",
+  "gold_tool": "TMF687_retrieveQueryProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "PROD-9942"
+  }
+ },
+ {
+  "qid": "q0032",
+  "query": "Get trouble tickets for service ID SVC-7742 limited to the last 50 records ordered by creation date.",
+  "gold_tool": "TMF621_listTroubleTicket",
+  "gold_api": "TMF621",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": [
+    "id",
+    "serviceId",
+    "status"
+   ],
+   "limit": 50,
+   "offset": 0
+  }
+ },
+ {
+  "qid": "q0033",
+  "query": "Show me the details for product specification ID 'PROD-9876' from the service catalog.",
+  "gold_tool": "TMF620_retrieveProductSpecification",
+  "gold_api": "TMF620",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "PROD-9876"
+  }
+ },
+ {
+  "qid": "q0034",
+  "query": "What is the status of monitor instance mnt-9001?",
+  "gold_tool": "TMF931_retrieveMonitor",
+  "gold_api": "TMF931",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "mnt-9001"
+  }
+ },
+ {
+  "qid": "q0035",
+  "query": "Please patch validation ID VA-9982 to correct the missing postal code for the Berlin route.",
+  "gold_tool": "TMF673_geographicAddressValidationPatch",
+  "gold_api": "TMF673",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "geographicAddressValidationId": "VA-9982",
+   "AddressValidation": {
+    "postalCode": "10115"
+   }
+  }
+ },
+ {
+  "qid": "q0036",
+  "query": "Remove transfer balance id TRANS99821 used for the roaming service package.",
+  "gold_tool": "TMF654_deleteTransferBalance",
+  "gold_api": "TMF654",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TRANS99821"
+  }
+ },
+ {
+  "qid": "q0037",
+  "query": "Generate an AgreementSpecification for the new 'FiberHome' service offering with a 3-year term and unlimited data.",
+  "gold_tool": "TMF651_createAgreementSpecification",
+  "gold_api": "TMF651",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "agreementSpecification": {
+    "name": "FiberHome",
+    "term": "36 months",
+    "dataAllowance": "unlimited"
+   }
+  }
+ },
+ {
+  "qid": "q0038",
+  "query": "Remove the PartyRole for ID 'party-role-998' that links our billing system to the service catalog.",
+  "gold_tool": "TMF669_deletePartyRole",
+  "gold_api": "TMF669",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "party-role-998"
+  }
+ },
+ {
+  "qid": "q0039",
+  "query": "Remove service catalog entry with ID 'SV-CUST-BROADBAND-99821' from the system.",
+  "gold_tool": "TMF640_deleteService",
+  "gold_api": "TMF640",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 23,
+  "gold_args": {
+   "id": "SV-CUST-BROADBAND-99821"
+  }
+ },
+ {
+  "qid": "q0040",
+  "query": "Remove access for user ID 8472 from the service management system.",
+  "gold_tool": "TMF914_deleteUser",
+  "gold_api": "TMF914",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "8472"
+  }
+ },
+ {
+  "qid": "q0041",
+  "query": "Please initiate a migration process to transfer all active subscribers from Region A to Region B.",
+  "gold_tool": "TMF664_createMigrate",
+  "gold_api": "TMF664",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "migrate",
+   "value": "{\"sourceRegion\": \"Region-A\", \"targetRegion\": \"Region-B\"}"
+  }
+ },
+ {
+  "qid": "q0042",
+  "query": "Retrieve up to 50 recent stock checks for the service catalog.",
+  "gold_tool": "TMF687_listCheckProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "id,name,quantity",
+   "offset": 0,
+   "limit": 50
+  }
+ },
+ {
+  "qid": "q0043",
+  "query": "What is the privacy agreement record for customer ID CUST-998765?",
+  "gold_tool": "TMF644_retrievePartyPrivacyAgreement",
+  "gold_api": "TMF644",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "CUST-998765"
+  }
+ },
+ {
+  "qid": "q0044",
+  "query": "What is the status of service test ID NAAS-ST-909-4521 in the service catalog?",
+  "gold_tool": "TMF909_retrieveServiceTest",
+  "gold_api": "TMF909",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "NAAS-ST-909-4521"
+  }
+ },
+ {
+  "qid": "q0045",
+  "query": "Show me the details for geographic site GE0987654.",
+  "gold_tool": "TMF674_retrieveGeographicSite",
+  "gold_api": "TMF674",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "GE0987654"
+  }
+ },
+ {
+  "qid": "q0046",
+  "query": "GET /application/12345 to fetch details for service application ID 12345",
+  "gold_tool": "TMF931_retrieveApplication",
+  "gold_api": "TMF931",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "12345"
+  }
+ },
+ {
+  "qid": "q0047",
+  "query": "Patch the 'NewServiceActivation' event type ID to include a new loyalty reward tier.",
+  "gold_tool": "TMF658_Update Event Types1",
+  "gold_api": "TMF658",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "eventTypeId": "NewServiceActivation",
+   "Body": {
+    "loyaltyRewardTier": "GoldPlus"
+   }
+  }
+ },
+ {
+  "qid": "q0048",
+  "query": "Remove the condition with ID C123 from rule R456 in service catalog product spec P789.",
+  "gold_tool": "TMF658_Delete Rule Condition",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productSpecId": "P789",
+   "ruleId": "R456",
+   "conditionId": "C123"
+  }
+ },
+ {
+  "qid": "q0049",
+  "query": "POST /customer to create a new customer named John Smith with ID CUST99876.",
+  "gold_tool": "TMF629_createCustomer",
+  "gold_api": "TMF629",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "CUST99876"
+  }
+ },
+ {
+  "qid": "q0050",
+  "query": "Remove the legacy roaming service category identified by ID ROAM-SVC-CAT-99.",
+  "gold_tool": "TMF662_deleteEntityCategory",
+  "gold_api": "TMF662",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "ROAM-SVC-CAT-99"
+  }
+ },
+ {
+  "qid": "q0051",
+  "query": "Create a new billing account for customer ID 98765 with the default contract terms.",
+  "gold_tool": "TMF666_createBillingAccount",
+  "gold_api": "TMF666",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "customerID": "98765",
+   "contractType": "default"
+  }
+ },
+ {
+  "qid": "q0052",
+  "query": "Start a new import job to load the Q3 vendor service catalog changes.",
+  "gold_tool": "TMF634_createImportJob",
+  "gold_api": "TMF634",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "name": "q3-vendor-service-catalog-import-20241024"
+  }
+ },
+ {
+  "qid": "q0053",
+  "query": "Create a new scale resource named 'traffic-shaper-v2' for the service catalog using default configuration parameters.",
+  "gold_tool": "TMF664_createScale",
+  "gold_api": "TMF664",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "traffic-shaper-v2"
+  }
+ },
+ {
+  "qid": "q0054",
+  "query": "Update physical resource ID PHY-RS-9982 to change its vendor name from Nokia to Ericsson.",
+  "gold_tool": "TMF639_patchPhysicalResource",
+  "gold_api": "TMF639",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "PHY-RS-9982",
+   "physicalResource": "{\"vendorName\": \"Ericsson\"}"
+  }
+ },
+ {
+  "qid": "q0055",
+  "query": "Fetch the digital identity details for ID 'ID-98765' to verify customer account status.",
+  "gold_tool": "TMF720_retrieveDigitalIdentity",
+  "gold_api": "TMF720",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "ID-98765"
+  }
+ },
+ {
+  "qid": "q0056",
+  "query": "Register a new service named 'MobileDataPlan' with a monthly fee of $50 in the service catalog.",
+  "gold_tool": "TMF640_createService",
+  "gold_api": "TMF640",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 23,
+  "gold_args": {
+   "service": "{\"name\": \"MobileDataPlan\", \"monthlyFee\": 50}",
+   "fee": 50
+  }
+ },
+ {
+  "qid": "q0057",
+  "query": "Get details for AI contract ID 'AI-CRMT-9921' to review its current status.",
+  "gold_tool": "TMF915_retrieveAiContract",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "AI-CRMT-9921"
+  }
+ },
+ {
+  "qid": "q0058",
+  "query": "Retrieve the geographic location entity for service catalog ID SC-8492 in region NA-West.",
+  "gold_tool": "TMF675_retrieveGeographicLocationCreate",
+  "gold_api": "TMF675",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "serviceCatalogId": "SC-8492",
+   "region": "NA-West"
+  }
+ },
+ {
+  "qid": "q0059",
+  "query": "Patch the service catalog entity with ID sc-9001 to update its description field.",
+  "gold_tool": "TMF703_patchEntity",
+  "gold_api": "TMF703",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "sc-9001",
+   "entity": "{\"description\": \"Updated service catalog for 5G core\"}"
+  }
+ },
+ {
+  "qid": "q0060",
+  "query": "Please generate a ProblemUngroup record for problem ID 84729 to isolate the root cause in the core network.",
+  "gold_tool": "TMF656_createProblemUngroup",
+  "gold_api": "TMF656",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "problemUngroup": {
+    "problemId": "84729"
+   }
+  }
+ },
+ {
+  "qid": "q0061",
+  "query": "Remove resource specification spec-id-9021 from our service catalog.",
+  "gold_tool": "TMF730_deleteResourceSpecification",
+  "gold_api": "TMF730",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "spec-id-9021"
+  }
+ },
+ {
+  "qid": "q0062",
+  "query": "Update reservation 12345 to change its available capacity to 500 Mbps for the core network service catalog.",
+  "gold_tool": "TMF685_patchReservation",
+  "gold_api": "TMF685",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "12345",
+   "reservation": {
+    "capacity": "500 Mbps"
+   }
+  }
+ },
+ {
+  "qid": "q0063",
+  "query": "Remove category 9876 from the service catalog.",
+  "gold_tool": "TMF620_deleteCategory",
+  "gold_api": "TMF620",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "9876"
+  }
+ },
+ {
+  "qid": "q0064",
+  "query": "Assess the risk profile for the new 'GlobalConnect Enterprise' offering in the service catalog.",
+  "gold_tool": "TMF696_createProductOfferingRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productOfferingRiskAssessment": {
+    "productOfferingId": "GCE-2024-A1",
+    "serviceCatalog": "Service Catalog"
+   }
+  }
+ },
+ {
+  "qid": "q0065",
+  "query": "Remove test case ID TC-9021 for the provisioning workflow simulation.",
+  "gold_tool": "TMF704_deleteTestCase",
+  "gold_api": "TMF704",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TC-9021"
+  }
+ },
+ {
+  "qid": "q0066",
+  "query": "Update service catalog IoT service abc-123 to change its status to active.",
+  "gold_tool": "TMF914_patchIotService",
+  "gold_api": "TMF914",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "abc-123",
+   "iotService": {
+    "status": "active"
+   }
+  }
+ },
+ {
+  "qid": "q0067",
+  "query": "Show me the details for TestDataSchema ID 9876.",
+  "gold_tool": "TMF706_retrieveTestDataSchema",
+  "gold_api": "TMF706",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "9876"
+  }
+ },
+ {
+  "qid": "q0068",
+  "query": "Retrieve the first 50 partnership records with only their name and status fields.",
+  "gold_tool": "TMF668_listPartnership",
+  "gold_api": "TMF668",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": "50",
+   "offset": "0",
+   "fields": "name,status"
+  }
+ },
+ {
+  "qid": "q0069",
+  "query": "Show me all cleared alarms for service catalog ID SC-1042 with fields status timestamp and limit set to fifty.",
+  "gold_tool": "TMF642_listClearAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "status timestamp",
+   "limit": "50"
+  }
+ },
+ {
+  "qid": "q0070",
+  "query": "Show me the details for canceling reservation ID RSV-9928 in the service catalog.",
+  "gold_tool": "TMF716_retrieveCancelResourceReservation",
+  "gold_api": "TMF716",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "RSV-9928"
+  }
+ },
+ {
+  "qid": "q0071",
+  "query": "Remove the obsolete service catalog entry identified by ID SC-9847.",
+  "gold_tool": "TMF703_deleteEntity",
+  "gold_api": "TMF703",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "SC-9847"
+  }
+ },
+ {
+  "qid": "q0072",
+  "query": "Remove the AI contract specification for ID 98475.",
+  "gold_tool": "TMF915_deleteAiContractSpecification",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "98475"
+  }
+ },
+ {
+  "qid": "q0073",
+  "query": "Create a performance indicator group specification named 'LTE_Radio_Health' for the service catalog using thresholds of 99.5% availability.",
+  "gold_tool": "TMF628_createPerformanceIndicatorGroupSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "performanceIndicatorGroupSpecification": {
+    "name": "LTE_Radio_Health",
+    "serviceCatalogName": "service_catalog",
+    "thresholds": "99.5%"
+   }
+  }
+ },
+ {
+  "qid": "q0074",
+  "query": "Remove service catalog specification ID SOC-998872.",
+  "gold_tool": "TMF641_deleteServiceOrderSpecification",
+  "gold_api": "TMF641",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "id": "SOC-998872"
+  }
+ },
+ {
+  "qid": "q0075",
+  "query": "Remove the privacy profile for subscriber account 849201 before transferring ownership.",
+  "gold_tool": "TMF644_deletePartyPrivacyProfile",
+  "gold_api": "TMF644",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "849201"
+  }
+ },
+ {
+  "qid": "q0076",
+  "query": "What is the status of monitor M-8472 for the service catalog?",
+  "gold_tool": "TMF702_retrieveMonitor",
+  "gold_api": "TMF702",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "M-8472"
+  }
+ },
+ {
+  "qid": "q0077",
+  "query": "Get the aiModelSpecification details for model ID AI-MODEL-9982.",
+  "gold_tool": "TMF915_retrieveAiModelSpecification",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "AI-MODEL-9982"
+  }
+ },
+ {
+  "qid": "q0078",
+  "query": "Get the details for resource catalog ID RES-CAT-9001.",
+  "gold_tool": "TMF634_retrieveResourceCatalog",
+  "gold_api": "TMF634",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "RES-CAT-9001"
+  }
+ },
+ {
+  "qid": "q0079",
+  "query": "Delete the process flow identified by ID PF-2024-SERVICE-CATALOG-X9 to remove it from the system.",
+  "gold_tool": "TMF701_deleteProcessFlow",
+  "gold_api": "TMF701",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PF-2024-SERVICE-CATALOG-X9"
+  }
+ },
+ {
+  "qid": "q0080",
+  "query": "Remove the critical alarm associated with equipment ID 4829 from our monitoring dashboard.",
+  "gold_tool": "TMF915_deleteAlarm",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "4829"
+  }
+ },
+ {
+  "qid": "q0081",
+  "query": "Show me the first 20 fields of the service catalog resource categories starting from offset zero.",
+  "gold_tool": "TMF634_listResourceCategory",
+  "gold_api": "TMF634",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "fields": "all",
+   "offset": 0,
+   "limit": 20
+  }
+ },
+ {
+  "qid": "q0082",
+  "query": "Delete the product offering price for subscription plan ID PRD-OFFER-9021 in the service catalog.",
+  "gold_tool": "TMF620_deleteProductOfferingPrice",
+  "gold_api": "TMF620",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "PRD-OFFER-9021"
+  }
+ },
+ {
+  "qid": "q0083",
+  "query": "Retrieve the current status of my open product order for the enterprise broadband bundle just created.",
+  "gold_tool": "TMF931_listApiProductOrder",
+  "gold_api": "TMF931",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {}
+ },
+ {
+  "qid": "q0084",
+  "query": "What is the current top-up balance for prepaid customer ID 987654321?",
+  "gold_tool": "TMF654_retrieveTopupBalance",
+  "gold_api": "TMF654",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "987654321"
+  }
+ },
+ {
+  "qid": "q0085",
+  "query": "Retrieve details for geographic location ID 'LOC-NY-001' to verify its assigned coordinates.",
+  "gold_tool": "TMF675_geographicLocationGet",
+  "gold_api": "TMF675",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "geographicLocationId": "LOC-NY-001"
+  }
+ },
+ {
+  "qid": "q0086",
+  "query": "Show me the diagnose incident details for network issue ticket INC-9847.",
+  "gold_tool": "TMF724_retrieveDiagnoseIncident",
+  "gold_api": "TMF724",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "INC-9847"
+  }
+ },
+ {
+  "qid": "q0087",
+  "query": "Create a new query service qualification record for the 'Home Broadband' service category in region EU-West.",
+  "gold_tool": "TMF645_createQueryServiceQualification",
+  "gold_api": "TMF645",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "queryServiceQualification": {
+    "serviceCategory": "Home Broadband",
+    "region": "EU-West"
+   }
+  }
+ },
+ {
+  "qid": "q0088",
+  "query": "Remove the usage specification named 'PostPaidVoicePlan' from the service catalog.",
+  "gold_tool": "TMF635_deleteUsageSpecification",
+  "gold_api": "TMF635",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PostPaidVoicePlan"
+  }
+ },
+ {
+  "qid": "q0089",
+  "query": "Show me the loyalty earn history for account TM987654 on balance BNL-001.",
+  "gold_tool": "TMF658_List Earn Transactions",
+  "gold_api": "TMF658",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "accountId": "TM987654",
+   "balanceId": "BNL-001"
+  }
+ },
+ {
+  "qid": "q0090",
+  "query": "What are the available service catalog environment IDs when requesting the first five records?",
+  "gold_tool": "TMF705_listAbstractEnvironment",
+  "gold_api": "TMF705",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": 5,
+   "offset": 0,
+   "fields": "id,name"
+  }
+ },
+ {
+  "qid": "q0091",
+  "query": "Remove the logical resource with ID 'SRV-2024-9876' from the service catalog inventory.",
+  "gold_tool": "TMF639_deleteLogicalResource",
+  "gold_api": "TMF639",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "SRV-2024-9876"
+  }
+ },
+ {
+  "qid": "q0092",
+  "query": "Remove the ProductOfferingQualification for service catalog ID PRD-QF-89210 from the database.",
+  "gold_tool": "TMF679_deleteProductOfferingQualification",
+  "gold_api": "TMF679",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "PRD-QF-89210"
+  }
+ },
+ {
+  "qid": "q0093",
+  "query": "Remove the service catalog with ID SC-9001 to stop provisioning onboarding plans.",
+  "gold_tool": "TMF633_deleteServiceCatalog",
+  "gold_api": "TMF633",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "SC-9001"
+  }
+ },
+ {
+  "qid": "q0094",
+  "query": "Remove the IoT service specification for smart metering ID 987654 from our service catalog.",
+  "gold_tool": "TMF914_deleteIotServiceSpecification",
+  "gold_api": "TMF914",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "id": "987654"
+  }
+ },
+ {
+  "qid": "q0095",
+  "query": "Get migration details for service catalog resource functions with a limit of 10 and offset 0.",
+  "gold_tool": "TMF664_listMigrate",
+  "gold_api": "TMF664",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "serviceCatalog.resourceFunctions",
+   "offset": "0",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0096",
+  "query": "Remove the ResourceFunction with ID 'RF-9021' from the service catalog.",
+  "gold_tool": "TMF664_deleteResourceFunction",
+  "gold_api": "TMF664",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "RF-9021"
+  }
+ },
+ {
+  "qid": "q0097",
+  "query": "Remove the abstract environment with ID 'env-test-99' from the staging catalog.",
+  "gold_tool": "TMF705_deleteAbstractEnvironment",
+  "gold_api": "TMF705",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "env-test-99"
+  }
+ },
+ {
+  "qid": "q0098",
+  "query": "What service offerings are available for our new IoT connectivity bundle in the product catalog?",
+  "gold_tool": "TMF936_listProductOffering",
+  "gold_api": "TMF936",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {}
+ },
+ {
+  "qid": "q0099",
+  "query": "Check the status of monitor ID 48291 for the main backbone service.",
+  "gold_tool": "TMF702-ResourceActivationConfiguration_retrieveMonitor",
+  "gold_api": "TMF702-ResourceActivationConfiguration",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "48291"
+  }
+ },
+ {
+  "qid": "q0100",
+  "query": "Remove the adjustment with ID ADJ-99284 associated with service account 5501.",
+  "gold_tool": "TMF654_deleteAdjustBalance",
+  "gold_api": "TMF654",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "ADJ-99284"
+  }
+ },
+ {
+  "qid": "q0101",
+  "query": "Fetch the first twenty non-functional test models for our mobile service catalog.",
+  "gold_tool": "TMF704_listNonFunctionalTestModel",
+  "gold_api": "TMF704",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "limit": "20",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0102",
+  "query": "Fetch the customer bill on demand for account 987654 with fields status and amount.",
+  "gold_tool": "TMF678_listCustomerBillOnDemand",
+  "gold_api": "TMF678",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "status,amount",
+   "offset": "0",
+   "limit": "1"
+  }
+ },
+ {
+  "qid": "q0103",
+  "query": "Register a service qualification for our new 5G broadband offering with a latency SLA of 10ms and availability of 99.9%.",
+  "gold_tool": "TMF909_createServiceQualification",
+  "gold_api": "TMF909",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "serviceQualification": "5G Broadband Latency:10ms Availability:99.9%"
+  }
+ },
+ {
+  "qid": "q0104",
+  "query": "Update the role ID 5439 to remove its billing flag for customer ACME Corp.",
+  "gold_tool": "TMF669_patchPartyRole",
+  "gold_api": "TMF669",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "5439",
+   "partyRole": {
+    "billingFlag": false
+   }
+  }
+ },
+ {
+  "qid": "q0105",
+  "query": "Remove the legacy service catalog with ID 'SC-9981' to clear outdated reference data.",
+  "gold_tool": "TMF662_deleteEntityCatalog",
+  "gold_api": "TMF662",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "SC-9981"
+  }
+ },
+ {
+  "qid": "q0106",
+  "query": "Retrieve the service catalog logical resources starting from offset 0 with a limit of 50.",
+  "gold_tool": "TMF639_listLogicalResource",
+  "gold_api": "TMF639",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "offset": "0",
+   "limit": "50"
+  }
+ },
+ {
+  "qid": "q0107",
+  "query": "Remove the provisioning report for intent ENG-7890 and service order SOS-4512.",
+  "gold_tool": "TMF921_deleteIntentReport",
+  "gold_api": "TMF921",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "intentId": "ENG-7890",
+   "id": "SOS-4512"
+  }
+ },
+ {
+  "qid": "q0108",
+  "query": "Register a new resource specification named 'Standard-Fiber-Onboarding' for the service catalog with ID 'SPEC-9001'.",
+  "gold_tool": "TMF634_createResourceSpecification",
+  "gold_api": "TMF634",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "resourceSpecification": "Standard-Fiber-Onboarding"
+  }
+ },
+ {
+  "qid": "q0109",
+  "query": "Update test suite result ID 4589 to mark the latency check as failed due to routing anomalies.",
+  "gold_tool": "TMF707_patchTestSuiteResult",
+  "gold_api": "TMF707",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "4589",
+   "testSuiteResult": "{\"status\": \"FAILED\", \"failureReason\": \"routing anomaly\"}"
+  }
+ },
+ {
+  "qid": "q0110",
+  "query": "Retrieve the accumulated balance for prepaid account ID 987654321 with offset zero and limit of ten records.",
+  "gold_tool": "TMF654_listAccumulatedBalance",
+  "gold_api": "TMF654",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "offset": "0",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0111",
+  "query": "Remove the PerformanceIndicatorSpecification with ID NET-PERF-902 from our service catalog.",
+  "gold_tool": "TMF628_deletePerformanceIndicatorSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "NET-PERF-902"
+  }
+ },
+ {
+  "qid": "q0112",
+  "query": "Remove the legacy 4G core network product identified as PROD-CORE-4G-001 from the service catalog.",
+  "gold_tool": "TMF637_deleteProduct",
+  "gold_api": "TMF637",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "PROD-CORE-4G-001"
+  }
+ },
+ {
+  "qid": "q0113",
+  "query": "Update the IoT Device Specification with ID spec-8492 to change the supported network type to NB-IoT.",
+  "gold_tool": "TMF908_patchIotDeviceSpecification",
+  "gold_api": "TMF908",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "spec-8492"
+  }
+ },
+ {
+  "qid": "q0114",
+  "query": "Get the IotManagementEvent record for device ID 'DEV-908765' to check its current status.",
+  "gold_tool": "TMF908_retrieveIotManagementEvent",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "DEV-908765"
+  }
+ },
+ {
+  "qid": "q0115",
+  "query": "Show me the details for document specification ID DOC-9942 in the service catalog.",
+  "gold_tool": "TMF667_retrieveDocumentSpecification",
+  "gold_api": "TMF667",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "DOC-9942"
+  }
+ },
+ {
+  "qid": "q0116",
+  "query": "Fetch the latest service problems for the broadband network segment using a limit of ten results and include only the status field.",
+  "gold_tool": "TMF656_listServiceProblem",
+  "gold_api": "TMF656",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "fields": "status",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0117",
+  "query": "Submit a usage consumption report request for service catalog ID 5001 covering the last quarter.",
+  "gold_tool": "TMF909_createUsageConsumptionReportRequest",
+  "gold_api": "TMF909",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "usageConsumptionReportRequest": {
+    "serviceCatalogId": "5001",
+    "timeRange": "lastQuarter"
+   }
+  }
+ },
+ {
+  "qid": "q0118",
+  "query": "Show me the definition of performance indicator spec ABC-99876.",
+  "gold_tool": "TMF628_retrievePerformanceIndicatorSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "ABC-99876"
+  }
+ },
+ {
+  "qid": "q0119",
+  "query": "Remove the AI model for churn prediction identified as ID 'ML-CRN-PRED-042' from our network analytics repository.",
+  "gold_tool": "TMF915_deleteAiModel",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "ML-CRN-PRED-042"
+  }
+ },
+ {
+  "qid": "q0120",
+  "query": "Remove test scenario SCENARIO-12345 for the service catalog verification process.",
+  "gold_tool": "TMF709_deleteTestScenario",
+  "gold_api": "TMF709",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SCENARIO-12345"
+  }
+ },
+ {
+  "qid": "q0121",
+  "query": "Show me the cancel service order details for ID 89012 in the service catalog.",
+  "gold_tool": "TMF641_retrieveCancelServiceOrder",
+  "gold_api": "TMF641",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "89012"
+  }
+ },
+ {
+  "qid": "q0122",
+  "query": "List the first page of geographic locations with only names and countries.",
+  "gold_tool": "TMF675_geographicLocationFind",
+  "gold_api": "TMF675",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "fields": [
+    "name",
+    "country"
+   ],
+   "offset": 0,
+   "limit": 10
+  }
+ },
+ {
+  "qid": "q0123",
+  "query": "Create a new test suite named '5G-BBUCoverageValidation' for the service catalog.",
+  "gold_tool": "TMF704_createTestSuite",
+  "gold_api": "TMF704",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "name": "5G-BBUCoverageValidation"
+  }
+ },
+ {
+  "qid": "q0124",
+  "query": "Patch the association specification with id 'ASSOC-SPEC-007' to update its supported service types for the enterprise catalog.",
+  "gold_tool": "TMF662_patchAssociationSpecification",
+  "gold_api": "TMF662",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "ASSOC-SPEC-007",
+   "associationSpecification": {
+    "supportedServiceTypes": [
+     "Voice",
+     "Data"
+    ]
+   }
+  }
+ },
+ {
+  "qid": "q0125",
+  "query": "Set up a new on-demand performance collection for the Berlin service catalog to monitor latency spikes immediately.",
+  "gold_tool": "TMF628_createOnDemandCollection",
+  "gold_api": "TMF628",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "onDemandCollection": "Berlin-service-catalog-latency-monitor"
+  }
+ },
+ {
+  "qid": "q0126",
+  "query": "Remove the service catalog topic with ID SVC-CAT-902 from the event stream configuration.",
+  "gold_tool": "TMF688-Event_deleteTopic",
+  "gold_api": "TMF688-Event",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "SVC-CAT-902"
+  }
+ },
+ {
+  "qid": "q0127",
+  "query": "Get the non-functional test result for incident ticket ID INC-2024-8910.",
+  "gold_tool": "TMF707_retrieveNonFunctionalTestResult",
+  "gold_api": "TMF707",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "INC-2024-8910"
+  }
+ },
+ {
+  "qid": "q0128",
+  "query": "Provision a new group alarm named 'RAN-Sync-Failure' for the core network service catalog.",
+  "gold_tool": "TMF642_createGroupAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "groupAlarms": "RAN-Sync-Failure"
+  }
+ },
+ {
+  "qid": "q0129",
+  "query": "Show me the first 50 fields for every resource specification in the service catalog.",
+  "gold_tool": "TMF634_listResourceSpecification",
+  "gold_api": "TMF634",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "fields": "*",
+   "offset": "0",
+   "limit": "50"
+  }
+ },
+ {
+  "qid": "q0130",
+  "query": "Show me refunds for the enterprise fiber service catalog with fields id and amount limited to 50 results.",
+  "gold_tool": "TMF676_listRefund",
+  "gold_api": "TMF676",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "id,amount",
+   "limit": "50"
+  }
+ },
+ {
+  "qid": "q0131",
+  "query": "Remove the resource pool with ID RP-992845 from the service catalog.",
+  "gold_tool": "TMF685_deleteResourcePool",
+  "gold_api": "TMF685",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "RP-992845"
+  }
+ },
+ {
+  "qid": "q0132",
+  "query": "Remove service catalog entry ES-90012 for the outdated broadband plan.",
+  "gold_tool": "TMF638_deleteService",
+  "gold_api": "TMF638",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 23,
+  "gold_args": {
+   "id": "ES-90012"
+  }
+ },
+ {
+  "qid": "q0133",
+  "query": "Update service catalog individual ID 5509 to change the billing cycle to monthly.",
+  "gold_tool": "TMF632_patchIndividual",
+  "gold_api": "TMF632",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "5509",
+   "individual": {
+    "billingCycle": "monthly"
+   }
+  }
+ },
+ {
+  "qid": "q0134",
+  "query": "Update association #45678 to add a new dependency link for the core service catalog.",
+  "gold_tool": "TMF703_patchAssociation",
+  "gold_api": "TMF703",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "45678",
+   "association": "add dependency link"
+  }
+ },
+ {
+  "qid": "q0135",
+  "query": "Create a new service order specification for the fiber internet bundle with ID 'FIBER-BUNDLE-001' in the service catalog.",
+  "gold_tool": "TMF641_createServiceOrderSpecification",
+  "gold_api": "TMF641",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "serviceOrderSpecification": "FIBER-BUNDLE-001"
+  }
+ },
+ {
+  "qid": "q0136",
+  "query": "Show me the latest export jobs for the service catalog with a limit of 50 and only the job ID fields.",
+  "gold_tool": "TMF633_listExportJob",
+  "gold_api": "TMF633",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "limit": "50",
+   "fields": [
+    "id"
+   ],
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0137",
+  "query": "Remove the resource reservation with ID RES-99821 associated with the fiber optics service catalog entry.",
+  "gold_tool": "TMF716_deleteResourceReservation",
+  "gold_api": "TMF716",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "RES-99821"
+  }
+ },
+ {
+  "qid": "q0138",
+  "query": "Delete the loyalty account balance for member ID 12345 and balance token BNC-987.",
+  "gold_tool": "TMF658_Update Member Balance",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "accountId": "12345",
+   "balanceId": "BNC-987"
+  }
+ },
+ {
+  "qid": "q0139",
+  "query": "Remove service problem ID 59804 from the service catalog.",
+  "gold_tool": "TMF656_deleteServiceProblem",
+  "gold_api": "TMF656",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "59804"
+  }
+ },
+ {
+  "qid": "q0140",
+  "query": "Remove the customer with ID CUST-98765 who has multiple active service catalog subscriptions.",
+  "gold_tool": "TMF629_deleteCustomer",
+  "gold_api": "TMF629",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "CUST-98765"
+  }
+ },
+ {
+  "qid": "q0141",
+  "query": "Onboard a new application named 'BillingPortal' for the enterprise customer segment with priority level high.",
+  "gold_tool": "TMF931_createApplication",
+  "gold_api": "TMF931",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "application_name": "BillingPortal",
+   "customer_segment": "enterprise",
+   "priority_level": "high"
+  }
+ },
+ {
+  "qid": "q0142",
+  "query": "Show me the first 20 data access endpoints for the IoT service catalog.",
+  "gold_tool": "TMF908_listDataAccessEndpoint",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "id,name,status",
+   "offset": 0,
+   "limit": 20
+  }
+ },
+ {
+  "qid": "q0143",
+  "query": "Update work order WO-9982 to change status from Planned to In Progress for the fiber splice crew.",
+  "gold_tool": "TMF697_patchWorkOrder",
+  "gold_api": "TMF697",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "WO-9982",
+   "workOrder": {
+    "status": "In Progress"
+   }
+  }
+ },
+ {
+  "qid": "q0144",
+  "query": "Remove the appointment with ID 'APPT-98765432' associated with customer account 'ACC-112233'.",
+  "gold_tool": "TMF646_deleteAppointment",
+  "gold_api": "TMF646",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "APPT-98765432"
+  }
+ },
+ {
+  "qid": "q0145",
+  "query": "Remove the organization with ID org-4829 that is linked to our legacy billing system.",
+  "gold_tool": "TMF632_deleteOrganization",
+  "gold_api": "TMF632",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "org-4829"
+  }
+ },
+ {
+  "qid": "q0146",
+  "query": "Show me the first page of customer records with only their IDs and names.",
+  "gold_tool": "TMF629_listCustomer",
+  "gold_api": "TMF629",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "limit": 50,
+   "offset": 0,
+   "fields": [
+    "id",
+    "name"
+   ]
+  }
+ },
+ {
+  "qid": "q0147",
+  "query": "Remove the service catalog resource with ID SC-99887.",
+  "gold_tool": "TMF730_deleteResource",
+  "gold_api": "TMF730",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 14,
+  "gold_args": {
+   "id": "SC-99887"
+  }
+ },
+ {
+  "qid": "q0148",
+  "query": "Delete the usage consumption report request for service catalog item ID 78901.",
+  "gold_tool": "TMF914_deleteUsageConsumptionReportRequest",
+  "gold_api": "TMF914",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "78901"
+  }
+ },
+ {
+  "qid": "q0149",
+  "query": "Remove the import job scheduled for service catalog migration with ID JOB-9827.",
+  "gold_tool": "TMF914_deleteImportJob",
+  "gold_api": "TMF914",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "JOB-9827"
+  }
+ },
+ {
+  "qid": "q0150",
+  "query": "Remove search time slot ID 'SLOT-9980' from the service catalog.",
+  "gold_tool": "TMF646_deleteSearchTimeSlot",
+  "gold_api": "TMF646",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SLOT-9980"
+  }
+ },
+ {
+  "qid": "q0151",
+  "query": "Remove the failed general test artifact with ID GEN-TEST-992 associated with the service catalog.",
+  "gold_tool": "TMF710_deleteGeneralTestArtifact",
+  "gold_api": "TMF710",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "GEN-TEST-992"
+  }
+ },
+ {
+  "qid": "q0152",
+  "query": "Remove the export job associated with service catalog record JX992 before the scheduled data transfer.",
+  "gold_tool": "TMF620_deleteExportJob",
+  "gold_api": "TMF620",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "JX992"
+  }
+ },
+ {
+  "qid": "q0153",
+  "query": "Get the first page of tracking records for the service catalog using a limit of 50 entries and request all fields.",
+  "gold_tool": "TMF628_listTrackingRecord",
+  "gold_api": "TMF628",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": "50",
+   "offset": "0",
+   "fields": "all"
+  }
+ },
+ {
+  "qid": "q0154",
+  "query": "Create a new GoldMemberBonus loyalty event type for the service catalog with ID GMB-001 and description 'Reward points for top tier members'.",
+  "gold_tool": "TMF658_Create Event Types",
+  "gold_api": "TMF658",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "Body": {
+    "eventId": "GMB-001",
+    "eventType": "GoldMemberBonus",
+    "description": "Reward points for top tier members"
+   }
+  }
+ },
+ {
+  "qid": "q0155",
+  "query": "Create an extract from the service catalog for ticket ID 45892.",
+  "gold_tool": "TMF685_createExtract",
+  "gold_api": "TMF685",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "extract": "Extract for ticket ID 45892 from the service catalog."
+  }
+ },
+ {
+  "qid": "q0156",
+  "query": "Get the service catalog specification details for ID 'SO-98765'.",
+  "gold_tool": "TMF641_retrieveServiceOrderSpecification",
+  "gold_api": "TMF641",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "id": "SO-98765"
+  }
+ },
+ {
+  "qid": "q0157",
+  "query": "Set the partyPrivacyAgreement for account ABC123 to 'consent_granted' with retention period '7_years'.",
+  "gold_tool": "TMF644_createPartyPrivacyAgreement",
+  "gold_api": "TMF644",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "partyPrivacyAgreement": "consent_granted"
+  }
+ },
+ {
+  "qid": "q0158",
+  "query": "Remove the service test specification with ID 5079 from the service catalog.",
+  "gold_tool": "TMF909_deleteServiceTestSpecification",
+  "gold_api": "TMF909",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 8,
+  "gold_args": {
+   "id": "5079"
+  }
+ },
+ {
+  "qid": "q0159",
+  "query": "Remove the risk assessment record for party ID 78901.",
+  "gold_tool": "TMF696_deletePartyRoleRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "78901"
+  }
+ },
+ {
+  "qid": "q0160",
+  "query": "Show me the details for customer individual ID 849201.",
+  "gold_tool": "TMF632_retrieveIndividual",
+  "gold_api": "TMF632",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "849201"
+  }
+ },
+ {
+  "qid": "q0161",
+  "query": "Show me the prepaid balance adjustment details for customer ID 8840 with only the amount and status fields.",
+  "gold_tool": "TMF654_listAdjustBalance",
+  "gold_api": "TMF654",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": [
+    "amount",
+    "status"
+   ],
+   "offset": 0,
+   "limit": 1
+  }
+ },
+ {
+  "qid": "q0162",
+  "query": "Create a new topic named 'BillingEventStream' for processing real-time subscription status changes.",
+  "gold_tool": "TMF688-Event_createTopic",
+  "gold_api": "TMF688-Event",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "topic": "BillingEventStream"
+  }
+ },
+ {
+  "qid": "q0163",
+  "query": "Please show me the cancel resource order details for order ID 48291 in the service catalog.",
+  "gold_tool": "TMF652_retrieveCancelResourceOrder",
+  "gold_api": "TMF652",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "48291"
+  }
+ },
+ {
+  "qid": "q0164",
+  "query": "Show me the details for application owner with ID 4096 in the service catalog.",
+  "gold_tool": "TMF931_retrieveApplicationOwner",
+  "gold_api": "TMF931",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "4096"
+  }
+ },
+ {
+  "qid": "q0165",
+  "query": "Remove settlement account TM-SAC-9901 from the system.",
+  "gold_tool": "TMF666_deleteSettlementAccount",
+  "gold_api": "TMF666",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TM-SAC-9901"
+  }
+ },
+ {
+  "qid": "q0166",
+  "query": "Update party interaction ID 4829 to mark the service catalog notification as delivered.",
+  "gold_tool": "TMF683_patchPartyInteraction",
+  "gold_api": "TMF683",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "4829",
+   "partyInteraction": {
+    "status": "delivered"
+   }
+  }
+ },
+ {
+  "qid": "q0167",
+  "query": "Update the service catalog document ID 78901 to reflect the new pricing tier for enterprise plans.",
+  "gold_tool": "TMF667_patchDocument",
+  "gold_api": "TMF667",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "78901",
+   "document": {
+    "pricingTier": "enterprise"
+   }
+  }
+ },
+ {
+  "qid": "q0168",
+  "query": "Record a checkpoint for tracking ID CARGO-9940 that indicates the shipment cleared customs in Rotterdam.",
+  "gold_tool": "TMF684_createTrackingCheckpoint",
+  "gold_api": "TMF684",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "trackingId": "CARGO-9940",
+   "checkpointRequest": {
+    "status": "cleared",
+    "location": "Rotterdam"
+   }
+  }
+ },
+ {
+  "qid": "q0169",
+  "query": "Remove the test environment meta-model for ID 'env-meta-test-99' now.",
+  "gold_tool": "TMF705_deleteConcreteEnvironmentMetaModel",
+  "gold_api": "TMF705",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "env-meta-test-99"
+  }
+ },
+ {
+  "qid": "q0170",
+  "query": "Update promotion ID PROMO-8845 to reduce its validity end date by two weeks.",
+  "gold_tool": "TMF671_patchPromotion",
+  "gold_api": "TMF671",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PROMO-8845",
+   "promotion": {
+    "validityEndDate": "-14 days"
+   }
+  }
+ },
+ {
+  "qid": "q0171",
+  "query": "Remove the interaction record for reference ID 84729 from the service catalog.",
+  "gold_tool": "TMF683_deletePartyInteraction",
+  "gold_api": "TMF683",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "84729"
+  }
+ },
+ {
+  "qid": "q0172",
+  "query": "Show me the first ten association records for the service catalog using fields name and status.",
+  "gold_tool": "TMF662_listAssociation",
+  "gold_api": "TMF662",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "fields": "name,status",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0173",
+  "query": "Get the details for service catalog SC-2024-IOT-METRO using its ID.",
+  "gold_tool": "TMF914_retrieveServiceCatalog",
+  "gold_api": "TMF914",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "SC-2024-IOT-METRO"
+  }
+ },
+ {
+  "qid": "q0174",
+  "query": "Update performance indicator specification ID 'PI-SPEC-902' to include a new throughput threshold of 1000 Mbps.",
+  "gold_tool": "TMF628_patchPerformanceIndicatorSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PI-SPEC-902",
+   "performanceIndicatorSpecification": {
+    "throughputThresholdMbps": 1000
+   }
+  }
+ },
+ {
+  "qid": "q0175",
+  "query": "Remove the specific reward points from member ID 84920 for product SKU REWARD-99 in the service catalog.",
+  "gold_tool": "TMF658_Delete Product",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "memberId": "84920",
+   "programProductId": "REWARD-99"
+  }
+ },
+ {
+  "qid": "q0176",
+  "query": "Remove the loyalty program product spec for productSpecId LP-8901 from the service catalog.",
+  "gold_tool": "TMF658_Delete Product Spec",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productSpecId": "LP-8901"
+  }
+ },
+ {
+  "qid": "q0177",
+  "query": "Remove the test suite for validating the new 5G core gateway deployment identified as GW-2024-ALPHA.",
+  "gold_tool": "TMF704_deleteTestSuite",
+  "gold_api": "TMF704",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "GW-2024-ALPHA"
+  }
+ },
+ {
+  "qid": "q0178",
+  "query": "Show me all active alarms for the core router service catalog with offset zero and a limit of fifty.",
+  "gold_tool": "TMF908_listAlarm",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "fields": "severity,location",
+   "offset": "0",
+   "limit": "50"
+  }
+ },
+ {
+  "qid": "q0179",
+  "query": "Show me the top-up balance records for prepaid customer 8675309 starting from offset 10 with a limit of 25.",
+  "gold_tool": "TMF654_listTopupBalance",
+  "gold_api": "TMF654",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "id,amount,date",
+   "offset": "10",
+   "limit": "25"
+  }
+ },
+ {
+  "qid": "q0180",
+  "query": "Show my user identity details using bearer token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.",
+  "gold_tool": "TMF910_retrieveUserIdentity",
+  "gold_api": "TMF910",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+   "fields": "name,preferred_username"
+  }
+ },
+ {
+  "qid": "q0181",
+  "query": "Remove subscription payment method using ID 987654.",
+  "gold_tool": "TMF670_deletePaymentMethod",
+  "gold_api": "TMF670",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "987654"
+  }
+ },
+ {
+  "qid": "q0182",
+  "query": "Get the cancellation details for work order WO-892345 using all available fields.",
+  "gold_tool": "TMF697_retrieveCancelWorkOrder",
+  "gold_api": "TMF697",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "WO-892345",
+   "fields": "*"
+  }
+ },
+ {
+  "qid": "q0183",
+  "query": "What are the details for TestResourceAPI with ID TEST-RES-009?",
+  "gold_tool": "TMF705_retrieveTestResourceAPI",
+  "gold_api": "TMF705",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TEST-RES-009"
+  }
+ },
+ {
+  "qid": "q0184",
+  "query": "Set privacy preference 'opt-in' for customer ID 98765 under the service catalog.",
+  "gold_tool": "TMF644_createPartyPrivacyProfileSpecification",
+  "gold_api": "TMF644",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "partyPrivacyProfileSpecification": {
+    "customerID": "98765",
+    "privacyPreference": "opt-in"
+   }
+  }
+ },
+ {
+  "qid": "q0185",
+  "query": "Remove trouble ticket TMF621 with ID 4592 from the service catalog.",
+  "gold_tool": "TMF621_deleteTroubleTicket",
+  "gold_api": "TMF621",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "4592"
+  }
+ },
+ {
+  "qid": "q0186",
+  "query": "Update service problem ID SP-7890 by setting its status to resolved in the service catalog.",
+  "gold_tool": "TMF909_patchServiceProblem",
+  "gold_api": "TMF909",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "SP-7890",
+   "serviceProblem": "{\"status\":\"resolved\"}"
+  }
+ },
+ {
+  "qid": "q0187",
+  "query": "Update the resource category 'Network Service' ID 'NS-001' to add a new description field.",
+  "gold_tool": "TMF634_patchResourceCategory",
+  "gold_api": "TMF634",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "NS-001",
+   "resourceCategory": {
+    "description": "Managed network services for enterprise clients"
+   }
+  }
+ },
+ {
+  "qid": "q0188",
+  "query": "Remove the failed non-functional test result for service catalog item ID 45892.",
+  "gold_tool": "TMF707_deleteNonFunctionalTestResult",
+  "gold_api": "TMF707",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "45892"
+  }
+ },
+ {
+  "qid": "q0189",
+  "query": "Create a new loyalty burn transaction for account AC-99821 and balance BAL-5507.",
+  "gold_tool": "TMF658_Burn Loyalty Balance",
+  "gold_api": "TMF658",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "accountId": "AC-99821",
+   "balanceId": "BAL-5507"
+  }
+ },
+ {
+  "qid": "q0190",
+  "query": "Remove the service catalog query qualification with ID SQ-QS-998.",
+  "gold_tool": "TMF645_deleteQueryServiceQualification",
+  "gold_api": "TMF645",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "SQ-QS-998"
+  }
+ },
+ {
+  "qid": "q0191",
+  "query": "Show me the details for export job TMF-EXP-9021.",
+  "gold_tool": "TMF662_retrieveExportJob",
+  "gold_api": "TMF662",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "TMF-EXP-9021"
+  }
+ },
+ {
+  "qid": "q0192",
+  "query": "Show me up to fifty ungrouped alarms for the primary backbone service starting from offset zero.",
+  "gold_tool": "TMF642_listUnGroupAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": 50,
+   "offset": 0,
+   "fields": "*"
+  }
+ },
+ {
+  "qid": "q0193",
+  "query": "Get the pricing details for product offering ID 'PRD-OFFER-9847' from the service catalog.",
+  "gold_tool": "TMF620_retrieveProductOfferingPrice",
+  "gold_api": "TMF620",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "PRD-OFFER-9847"
+  }
+ },
+ {
+  "qid": "q0194",
+  "query": "Update the privacy profile for customer ID CUST-9021 to allow emergency contacts while retaining all other settings unchanged.",
+  "gold_tool": "TMF644_patchPartyPrivacyProfile",
+  "gold_api": "TMF644",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "CUST-9021",
+   "partyPrivacyProfile": {
+    "emergencyContactAllowed": true
+   }
+  }
+ },
+ {
+  "qid": "q0195",
+  "query": "Please create a shipping order for service catalog item 5001 with tracking number TRK-9988 and destination address 123 Main St.",
+  "gold_tool": "TMF700_createShippingOrder",
+  "gold_api": "TMF700",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "shippingOrder": {
+    "trackingNumber": "TRK-9988",
+    "destinationAddress": "123 Main St"
+   }
+  }
+ },
+ {
+  "qid": "q0196",
+  "query": "Show me the details for TestCaseExecution instance TCX-9021 used in the 5G service provisioning workflow.",
+  "gold_tool": "TMF708_retrieveTestCaseExecution",
+  "gold_api": "TMF708",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TCX-9021"
+  }
+ },
+ {
+  "qid": "q0197",
+  "query": "Stop the recurring measurement collection job for service catalog ID MEAS-COL-9847.",
+  "gold_tool": "TMF628_deleteMeasurementCollectionJob",
+  "gold_api": "TMF628",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "MEAS-COL-9847"
+  }
+ },
+ {
+  "qid": "q0198",
+  "query": "Update the CheckServiceQualification for service catalog ID 'svc-cat-902' to set status to pending.",
+  "gold_tool": "TMF645_patchCheckServiceQualification",
+  "gold_api": "TMF645",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "svc-cat-902",
+   "checkServiceQualification": {
+    "status": "pending"
+   }
+  }
+ },
+ {
+  "qid": "q0199",
+  "query": "Retrieve the loyalty condition for service catalog offer promotion ID LC-78945.",
+  "gold_tool": "TMF658_Get Condition",
+  "gold_api": "TMF658",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "conditionId": "LC-78945"
+  }
+ },
+ {
+  "qid": "q0200",
+  "query": "Remove the discontinued event type PROMO_END from the loyalty service catalog.",
+  "gold_tool": "TMF658_Delete Event Types",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "eventTypeId": "PROMO_END"
+  }
+ },
+ {
+  "qid": "q0201",
+  "query": "Remove the failed check for service qualification ID 7890 in the current maintenance window.",
+  "gold_tool": "TMF645_deleteCheckServiceQualification",
+  "gold_api": "TMF645",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "7890"
+  }
+ },
+ {
+  "qid": "q0202",
+  "query": "Remove the expired New Year bundle promotion from the service catalog.",
+  "gold_tool": "TMF671_deletePromotion",
+  "gold_api": "TMF671",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PROMO-NY-2024-BUNDLE"
+  }
+ },
+ {
+  "qid": "q0203",
+  "query": "Get the service catalog quote details for order ID OR-99827.",
+  "gold_tool": "TMF648_retrieveQuote",
+  "gold_api": "TMF648",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "OR-99827"
+  }
+ },
+ {
+  "qid": "q0204",
+  "query": "Create a new loyalty earn transaction for account A789-BETA and balance B-2024-X.",
+  "gold_tool": "TMF658_Earn Loyalty Balance",
+  "gold_api": "TMF658",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "accountId": "A789-BETA",
+   "balanceId": "B-2024-X"
+  }
+ },
+ {
+  "qid": "q0205",
+  "query": "What are the details for product offering ID 7890 in the service catalog?",
+  "gold_tool": "TMF620_retrieveProductOffering",
+  "gold_api": "TMF620",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "7890"
+  }
+ },
+ {
+  "qid": "q0206",
+  "query": "Remove the temporary test schema with ID 98765 that was used for the weekend provisioning exercise.",
+  "gold_tool": "TMF706_deleteTestDataSchema",
+  "gold_api": "TMF706",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "98765"
+  }
+ },
+ {
+  "qid": "q0207",
+  "query": "Create a heal for service catalog entry SLR-9001 using the default heal name.",
+  "gold_tool": "TMF664_createHeal",
+  "gold_api": "TMF664",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "heal"
+  }
+ },
+ {
+  "qid": "q0208",
+  "query": "Create a new resource pool for the service catalog using the name CoreData_Pool_04.",
+  "gold_tool": "TMF685_createResourcePool",
+  "gold_api": "TMF685",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "resourcePool": "CoreData_Pool_04"
+  }
+ },
+ {
+  "qid": "q0209",
+  "query": "Remove the legacy mobile data roaming agreement currently stored under ID MS-RM-9921.",
+  "gold_tool": "TMF668_deletePartnershipSpecification",
+  "gold_api": "TMF668",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "MS-RM-9921"
+  }
+ },
+ {
+  "qid": "q0210",
+  "query": "Create a communication message regarding service catalog outage for provider ID 7001.",
+  "gold_tool": "TMF681_createCommunicationMessage",
+  "gold_api": "TMF681",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "communicationMessage": "service catalog outage"
+  }
+ },
+ {
+  "qid": "q0211",
+  "query": "Remove the tracking details for shipment tracking ID TRK-998877 in the shipment management system.",
+  "gold_tool": "TMF684_deleteTracking",
+  "gold_api": "TMF684",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "trackingId": "TRK-998877"
+  }
+ },
+ {
+  "qid": "q0212",
+  "query": "Update serviceLevelObjective ID SLA-FR-001 to change the maximum delay threshold to 100ms.",
+  "gold_tool": "TMF657_patchServiceLevelObjective",
+  "gold_api": "TMF657",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SLA-FR-001",
+   "serviceLevelObjective": {
+    "maxDelay": "100ms"
+   }
+  }
+ },
+ {
+  "qid": "q0213",
+  "query": "Remove the risk assessment record with ID 'RA-998877' for this service catalog offering.",
+  "gold_tool": "TMF696_deletePartyRoleProductOfferingRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "RA-998877"
+  }
+ },
+ {
+  "qid": "q0214",
+  "query": "Show the details for the most recent network outage affecting the core routing service.",
+  "gold_tool": "TMF724_listDiagnoseIncident",
+  "gold_api": "TMF724",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": [
+    "incidentId",
+    "status"
+   ],
+   "offset": 0,
+   "limit": 1
+  }
+ },
+ {
+  "qid": "q0215",
+  "query": "Add a redemption action to loyalty rule R001 for product spec PC5001.",
+  "gold_tool": "TMF658_Add Rule Action",
+  "gold_api": "TMF658",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "productSpecId": "PC5001",
+   "ruleId": "R001"
+  }
+ },
+ {
+  "qid": "q0216",
+  "query": "Show me the details for communication message 58901.",
+  "gold_tool": "TMF681_retrieveCommunicationMessage",
+  "gold_api": "TMF681",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "58901"
+  }
+ },
+ {
+  "qid": "q0217",
+  "query": "Create a test scenario named '5G-BBUnit-01' for the service catalog to validate baseband performance.",
+  "gold_tool": "TMF709_createTestScenario",
+  "gold_api": "TMF709",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "5G-BBUnit-01"
+  }
+ },
+ {
+  "qid": "q0218",
+  "query": "Remove the definition for resource specification ID 'RSP-9981' from the service catalog.",
+  "gold_tool": "TMF634_deleteResourceSpecification",
+  "gold_api": "TMF634",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "RSP-9981"
+  }
+ },
+ {
+  "qid": "q0219",
+  "query": "Update serviceTestSpecification id 'TS-9981' to add a new latency check step.",
+  "gold_tool": "TMF914_patchServiceTestSpecification",
+  "gold_api": "TMF914",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 8,
+  "gold_args": {
+   "id": "TS-9981",
+   "serviceTestSpecification": {
+    "steps": [
+     {
+      "type": "latency_check",
+      "threshold_ms": 50
+     }
+    ]
+   },
+   "version": "1.0"
+  }
+ },
+ {
+  "qid": "q0220",
+  "query": "Reserve five GB of bandwidth in the data center service catalog for next Tuesday morning.",
+  "gold_tool": "TMF685_createReservation",
+  "gold_api": "TMF685",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "reservation": {
+    "serviceCatalog": "data center",
+    "bandwidth": "5GB",
+    "startTime": "next Tuesday 08:00"
+   }
+  }
+ },
+ {
+  "qid": "q0221",
+  "query": "Show me recent events for topic ID 'svc-catalog-main' limited to the last 10 records.",
+  "gold_tool": "TMF915_listEvent",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "topicId": "svc-catalog-main",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0222",
+  "query": "Retrieve the first 10 service test records for our mobile network's 5G service catalog.",
+  "gold_tool": "TMF653_listServiceTest",
+  "gold_api": "TMF653",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "limit": "10",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0223",
+  "query": "Assess the risk for product order ID PO-99887 associated with customer account ACC-1042.",
+  "gold_tool": "TMF696_createProductOrderRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productOrderRiskAssessment": {
+    "id": "RA-5561",
+    "productId": "PROD-PLAN-V2",
+    "orderReference": "PO-99887",
+    "customerAccountId": "ACC-1042"
+   }
+  }
+ },
+ {
+  "qid": "q0224",
+  "query": "Remove the document specification for service catalog template ID DOC-SP-902.",
+  "gold_tool": "TMF667_deleteDocumentSpecification",
+  "gold_api": "TMF667",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "DOC-SP-902"
+  }
+ },
+ {
+  "qid": "q0225",
+  "query": "Remove service test ID 98765 for the fiber broadband onboarding workflow.",
+  "gold_tool": "TMF653_deleteServiceTest",
+  "gold_api": "TMF653",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "id": "98765"
+  }
+ },
+ {
+  "qid": "q0226",
+  "query": "Remove the individual record with ID 'IND-8923' from the customer service catalog.",
+  "gold_tool": "TMF632_deleteIndividual",
+  "gold_api": "TMF632",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "IND-8923"
+  }
+ },
+ {
+  "qid": "q0227",
+  "query": "Add a new service catalog entry named 'Broadband-WAN-Package-A' with ID 'SC-9981'.",
+  "gold_tool": "TMF730_createResource",
+  "gold_api": "TMF730",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 14,
+  "gold_args": {
+   "resource": {
+    "name": "Broadband-WAN-Package-A",
+    "id": "SC-9981"
+   }
+  }
+ },
+ {
+  "qid": "q0228",
+  "query": "Fetch the details for export job ABC-12345 from the service catalog.",
+  "gold_tool": "TMF634_retrieveExportJob",
+  "gold_api": "TMF634",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "ABC-12345"
+  }
+ },
+ {
+  "qid": "q0229",
+  "query": "Please remove the completed test execution record for service catalog ID TEST-Suite-Exec-9021.",
+  "gold_tool": "TMF708_deleteTestSuiteExecution",
+  "gold_api": "TMF708",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TEST-Suite-Exec-9021"
+  }
+ },
+ {
+  "qid": "q0230",
+  "query": "Show me the first five individuals from the service catalog, including only their names and IDs.",
+  "gold_tool": "TMF632_listIndividual",
+  "gold_api": "TMF632",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "name, id",
+   "offset": 0,
+   "limit": 5
+  }
+ },
+ {
+  "qid": "q0231",
+  "query": "Create an abstract environment named 'Test-Prod-Migration' for the service catalog with status active.",
+  "gold_tool": "TMF705_createAbstractEnvironment",
+  "gold_api": "TMF705",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "Test-Prod-Migration",
+   "in": "body",
+   "type": null
+  }
+ },
+ {
+  "qid": "q0232",
+  "query": "Register a new entity category named 'billing-service-provisioning' under the service catalog.",
+  "gold_tool": "TMF662_createEntityCategory",
+  "gold_api": "TMF662",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "name": "billing-service-provisioning"
+  }
+ },
+ {
+  "qid": "q0233",
+  "query": "Register a new digital identity for service catalog entry 4892 using phone number +15550199.",
+  "gold_tool": "TMF720_createDigitalIdentity",
+  "gold_api": "TMF720",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {}
+ },
+ {
+  "qid": "q0234",
+  "query": "Retrieve street numbers for the Main Street segment using offset 0 and limit 10.",
+  "gold_tool": "TMF673_streetSegmentFind",
+  "gold_api": "TMF673",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "streetId": "MAIN-001",
+   "fields": "number,houseType",
+   "offset": 0,
+   "limit": 10
+  }
+ },
+ {
+  "qid": "q0235",
+  "query": "Retrieve the billing cycle specification for ID 45892 to verify our monthly recurring charge configuration.",
+  "gold_tool": "TMF666_retrieveBillingCycleSpecification",
+  "gold_api": "TMF666",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "45892"
+  }
+ },
+ {
+  "qid": "q0236",
+  "query": "Create a new service agreement for customer ID CUST-9981 under the Enterprise Fiber bundle.",
+  "gold_tool": "TMF651_createAgreement",
+  "gold_api": "TMF651",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "agreement": {
+    "customerId": "CUST-9981",
+    "bundleId": "ENT-FIBER-BUNDLE"
+   }
+  }
+ },
+ {
+  "qid": "q0237",
+  "query": "Create a trouble ticket for service catalog entry ID-4829 regarding the reported fiber outage in sector 7.",
+  "gold_tool": "TMF621_createTroubleTicket",
+  "gold_api": "TMF621",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "troubleTicket": "Service Catalog ID-4829 Fiber Outage Sector 7"
+  }
+ },
+ {
+  "qid": "q0238",
+  "query": "Remove the on-demand performance collection for service instance ID 50729 from the network monitoring dashboard.",
+  "gold_tool": "TMF628_deleteOnDemandCollection",
+  "gold_api": "TMF628",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "50729"
+  }
+ },
+ {
+  "qid": "q0239",
+  "query": "Add a new payment method named 'Visa Corporate' with type 'CreditCard' to the service catalog.",
+  "gold_tool": "TMF670_createPaymentMethod",
+  "gold_api": "TMF670",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "paymentMethod": "Visa Corporate"
+  }
+ },
+ {
+  "qid": "q0240",
+  "query": "Remove the service catalog intent with id NET-SVC-9847.",
+  "gold_tool": "TMF921_deleteIntent",
+  "gold_api": "TMF921",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "NET-SVC-9847"
+  }
+ },
+ {
+  "qid": "q0241",
+  "query": "Create a ChangeRequest for the service catalog upgrade scheduled next Tuesday.",
+  "gold_tool": "TMF655_createChangeRequest",
+  "gold_api": "TMF655",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "changeRequest": {
+    "status": "draft",
+    "description": "service catalog upgrade",
+    "scheduledDate": "2023-12-12"
+   }
+  }
+ },
+ {
+  "qid": "q0242",
+  "query": "Create an incident for service catalog reference SG-4092 due to a routing failure on core router R7.",
+  "gold_tool": "TMF724_createIncident",
+  "gold_api": "TMF724",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "incident": "SG-4092-routing-failure"
+  }
+ },
+ {
+  "qid": "q0243",
+  "query": "Remove product order PO-9982 from the service catalog.",
+  "gold_tool": "TMF622_deleteProductOrder",
+  "gold_api": "TMF622",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "PO-9982"
+  }
+ },
+ {
+  "qid": "q0244",
+  "query": "What is the available time slot for service catalog item 54392?",
+  "gold_tool": "TMF646_retrieveSearchTimeSlot",
+  "gold_api": "TMF646",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "54392"
+  }
+ },
+ {
+  "qid": "q0245",
+  "query": "Show me the fields for the first page of the service entity catalog.",
+  "gold_tool": "TMF662_listEntityCatalog",
+  "gold_api": "TMF662",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "fields": "*",
+   "offset": 0,
+   "limit": 100
+  }
+ },
+ {
+  "qid": "q0246",
+  "query": "What is the usage consumption report for NAAS component ID 'NAA-909-2024'?",
+  "gold_tool": "TMF909_retrieveUsageConsumptionReport",
+  "gold_api": "TMF909",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "NAA-909-2024"
+  }
+ },
+ {
+  "qid": "q0247",
+  "query": "Delete the service catalog document with ID SC-CAT-9981.",
+  "gold_tool": "TMF667_deleteDocument",
+  "gold_api": "TMF667",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SC-CAT-9981"
+  }
+ },
+ {
+  "qid": "q0248",
+  "query": "Update the reserve balance for prepaid service ID 'PREPAY-8842' to 50.00 USD.",
+  "gold_tool": "TMF654_patchReserveBalance",
+  "gold_api": "TMF654",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PREPAY-8842",
+   "reserveBalance": 50.0
+  }
+ },
+ {
+  "qid": "q0249",
+  "query": "Remove the service catalog resource identified by ID 'CAT-SVC-9981' from the system.",
+  "gold_tool": "TMF702_deleteResource",
+  "gold_api": "TMF702",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 15,
+  "gold_args": {
+   "id": "CAT-SVC-9981"
+  }
+ },
+ {
+  "qid": "q0250",
+  "query": "What are the first-level attributes for the resource specification with ID 'SPEC-908-ALARM'?",
+  "gold_tool": "TMF908_retrieveResourceSpecification",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "SPEC-908-ALARM"
+  }
+ },
+ {
+  "qid": "q0251",
+  "query": "Show me details for serviceLevelSpecification ID SL-998 with a limit of ten results.",
+  "gold_tool": "TMF657_listServiceLevelSpecification",
+  "gold_api": "TMF657",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "fields": "name,sla",
+   "offset": "0",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0252",
+  "query": "What is the status of IoT Data Event e9b4f2c1d8a7?",
+  "gold_tool": "TMF908_retrieveIotDataEvent",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "e9b4f2c1d8a7"
+  }
+ },
+ {
+  "qid": "q0253",
+  "query": "Create a critical trouble ticket for service catalog item ES-9987 due to the reported fiber cut in sector 4B.",
+  "gold_tool": "TMF910_troubleTicketCreate",
+  "gold_api": "TMF910",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "troubleTicket": {
+    "severity": "critical",
+    "description": "fiber cut in sector 4B",
+    "serviceItem": "ES-9987"
+   }
+  }
+ },
+ {
+  "qid": "q0254",
+  "query": "Remove shopping cart SC-102457 from the service catalog after confirming no active orders.",
+  "gold_tool": "TMF663_deleteShoppingCart",
+  "gold_api": "TMF663",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "SC-102457"
+  }
+ },
+ {
+  "qid": "q0255",
+  "query": "Retrieve the first 50 service catalog entries including only the name and status fields.",
+  "gold_tool": "TMF914_listServiceCatalog",
+  "gold_api": "TMF914",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "limit": 50,
+   "offset": 0,
+   "fields": "name,status"
+  }
+ },
+ {
+  "qid": "q0256",
+  "query": "Create a new product order for service catalog item ID 5001 in region APAC with priority high.",
+  "gold_tool": "TMF622_createProductOrder",
+  "gold_api": "TMF622",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "productOrder": {
+    "serviceCatalogItemId": "5001",
+    "region": "APAC",
+    "priority": "high"
+   }
+  }
+ },
+ {
+  "qid": "q0257",
+  "query": "Remove the financial account with ID 'ACC-99827' that was mistakenly provisioned for the wrong customer.",
+  "gold_tool": "TMF666_deleteFinancialAccount",
+  "gold_api": "TMF666",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "ACC-99827"
+  }
+ },
+ {
+  "qid": "q0258",
+  "query": "Remove the loyalty program member with ID LON-99821 from the service catalog.",
+  "gold_tool": "TMF658_Delete Member",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "memberId": "LON-99821"
+  }
+ },
+ {
+  "qid": "q0259",
+  "query": "What are the details for service catalog ID SVC-8892?",
+  "gold_tool": "TMF640_retrieveService",
+  "gold_api": "TMF640",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 23,
+  "gold_args": {
+   "id": "SVC-8892"
+  }
+ },
+ {
+  "qid": "q0260",
+  "query": "What is the status of incident INC-884759? Get its resolve details now.",
+  "gold_tool": "TMF724_retrieveResolveIncident",
+  "gold_api": "TMF724",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "INC-884759"
+  }
+ },
+ {
+  "qid": "q0261",
+  "query": "Add a monthly billing cycle specification named standard-mcycle with an effective date of today to the service catalog.",
+  "gold_tool": "TMF666_createBillingCycleSpecification",
+  "gold_api": "TMF666",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "billingCycleSpecification": {
+    "name": "standard-mcycle",
+    "effectiveDate": "2023-10-27"
+   }
+  }
+ },
+ {
+  "qid": "q0262",
+  "query": "Create a high-priority work order for network outage repair on the Berlin fiber segment.",
+  "gold_tool": "TMF697_createWorkOrder",
+  "gold_api": "TMF697",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "workOrder": {
+    "description": "Network outage repair",
+    "priority": "high",
+    "location": "Berlin fiber segment"
+   }
+  }
+ },
+ {
+  "qid": "q0263",
+  "query": "Create a new event for topic ID 'order-789' describing a failed provisioning attempt on service catalog item 'broadband-install-001'.",
+  "gold_tool": "TMF915_createEvent",
+  "gold_api": "TMF915",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "topicId": "order-789",
+   "event": "{\"description\": \"failed provisioning attempt\", \"serviceCatalogItem\": \"broadband-install-001\"}"
+  }
+ },
+ {
+  "qid": "q0264",
+  "query": "Remove nonfunctional test execution with id TEST-EXEC-9921 from the service catalog.",
+  "gold_tool": "TMF708_deleteNonFunctionalTestExecution",
+  "gold_api": "TMF708",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TEST-EXEC-9921"
+  }
+ },
+ {
+  "qid": "q0265",
+  "query": "Retrieve the loyalty conditions for rule 4589 on product spec ABC-2024-X.",
+  "gold_tool": "TMF658_List Rule Conditions",
+  "gold_api": "TMF658",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productSpecId": "ABC-2024-X",
+   "ruleId": "4589"
+  }
+ },
+ {
+  "qid": "q0266",
+  "query": "Fetch the details for geographic address ID FA-9821 to verify the delivery location.",
+  "gold_tool": "TMF673_geographicAddressGet",
+  "gold_api": "TMF673",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "geographicAddressId": "FA-9821"
+  }
+ },
+ {
+  "qid": "q0267",
+  "query": "Update service catalog ID 5007 to set its status to 'decommissioned' in the IoT device management system.",
+  "gold_tool": "TMF908_patchIotDevice",
+  "gold_api": "TMF908",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "5007",
+   "iotDevice": {
+    "status": "decommissioned"
+   }
+  }
+ },
+ {
+  "qid": "q0268",
+  "query": "Remove the reserve balance for prepaid service ID 'PREPAY-SVC-99281' to free up the blocked funds.",
+  "gold_tool": "TMF654_deleteReserveBalance",
+  "gold_api": "TMF654",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PREPAY-SVC-99281"
+  }
+ },
+ {
+  "qid": "q0269",
+  "query": "What is the reserve product stock ID RSP-98765 for the managed service catalog item?",
+  "gold_tool": "TMF687_retrieveReserveProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "RSP-98765"
+  }
+ },
+ {
+  "qid": "q0270",
+  "query": "Remove the top-up balance record for service catalog item SC-9982.",
+  "gold_tool": "TMF654_deleteTopupBalance",
+  "gold_api": "TMF654",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SC-9982"
+  }
+ },
+ {
+  "qid": "q0271",
+  "query": "Update service catalog AI contract ID 45892 to change the vendor partner field.",
+  "gold_tool": "TMF915_patchAiContract",
+  "gold_api": "TMF915",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "45892",
+   "aiContract": "{\"vendorPartner\": \"Nokia\"}"
+  }
+ },
+ {
+  "qid": "q0272",
+  "query": "Update general test artifact ID 'GTA-9876' to change its status from 'pending' to 'running'.",
+  "gold_tool": "TMF710_patchGeneralTestArtifact",
+  "gold_api": "TMF710",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "GTA-9876",
+   "generalTestArtifact": {
+    "status": "running"
+   }
+  }
+ },
+ {
+  "qid": "q0273",
+  "query": "Post a new test suite result for service catalog ID SVC-8099 with status pass and duration 45 seconds.",
+  "gold_tool": "TMF707_createTestSuiteResult",
+  "gold_api": "TMF707",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "testSuiteResult": "service catalog ID SVC-8099 with status pass and duration 45 seconds"
+  }
+ },
+ {
+  "qid": "q0274",
+  "query": "Remove the association linking service order ID SO-9988 to its associated provisioning record.",
+  "gold_tool": "TMF703_deleteAssociation",
+  "gold_api": "TMF703",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "SO-9988"
+  }
+ },
+ {
+  "qid": "q0275",
+  "query": "Remove loyalty rule R005 for product specification PS009 in the service catalog.",
+  "gold_tool": "TMF658_Delete Rule",
+  "gold_api": "TMF658",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "productSpecId": "PS009",
+   "ruleId": "R005"
+  }
+ },
+ {
+  "qid": "q0276",
+  "query": "What are the qualification details for service catalog item SC-8920?",
+  "gold_tool": "TMF914_retrieveServiceQualification",
+  "gold_api": "TMF914",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "SC-8920",
+   "fields": null
+  }
+ },
+ {
+  "qid": "q0277",
+  "query": "Show me the full IoT device specification for ID \"SENSOR-0042\" from the service catalog.",
+  "gold_tool": "TMF908_retrieveIotDeviceSpecification",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "SENSOR-0042",
+   "fields": "all"
+  }
+ },
+ {
+  "qid": "q0278",
+  "query": "Get the details for topic with id 'PROJ-CAT-009' to verify its current service catalog configuration.",
+  "gold_tool": "TMF915_retrieveTopic",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "PROJ-CAT-009"
+  }
+ },
+ {
+  "qid": "q0279",
+  "query": "Get the details for service candidate ID SC-8472 from the service catalog.",
+  "gold_tool": "TMF909_retrieveServiceCandidate",
+  "gold_api": "TMF909",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "SC-8472",
+   "fields": null
+  }
+ },
+ {
+  "qid": "q0280",
+  "query": "Add a new 'Cloud Connectivity' service category to the service catalog for our enterprise portfolio.",
+  "gold_tool": "TMF633_createServiceCategory",
+  "gold_api": "TMF633",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "serviceCategory": "Cloud Connectivity"
+  }
+ },
+ {
+  "qid": "q0281",
+  "query": "Create a sales lead for a new fiber broadband service package in the Berlin region.",
+  "gold_tool": "TMF699_createSalesLead",
+  "gold_api": "TMF699",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "salesLead": {
+    "servicePackage": "Fiber Broadband",
+    "region": "Berlin",
+    "status": "new"
+   }
+  }
+ },
+ {
+  "qid": "q0282",
+  "query": "Remove the resource category with ID 'CAT-9982' from the service catalog repository.",
+  "gold_tool": "TMF634_deleteResourceCategory",
+  "gold_api": "TMF634",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "CAT-9982"
+  }
+ },
+ {
+  "qid": "q0283",
+  "query": "Remove service order SOID-882910 from the active provisioning list immediately.",
+  "gold_tool": "TMF641_deleteServiceOrder",
+  "gold_api": "TMF641",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "SOID-882910"
+  }
+ },
+ {
+  "qid": "q0284",
+  "query": "Show me the first 50 service catalog fields starting from offset 0.",
+  "gold_tool": "TMF633_listServiceCategory",
+  "gold_api": "TMF633",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "limit": 50,
+   "offset": 0,
+   "fields": "all"
+  }
+ },
+ {
+  "qid": "q0285",
+  "query": "Show me the details for the AI contract violation with ID 'viol-99821' affecting our primary service catalog.",
+  "gold_tool": "TMF915_retrieveAiContractViolation",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "viol-99821"
+  }
+ },
+ {
+  "qid": "q0286",
+  "query": "Remove the discontinued VoIP offering identified as OFF-VIP-9000 from the service catalog.",
+  "gold_tool": "TMF620_deleteProductOffering",
+  "gold_api": "TMF620",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "OFF-VIP-9000"
+  }
+ },
+ {
+  "qid": "q0287",
+  "query": "Remove the test service catalog instance with ID 'TEST-SVC-9921' now.",
+  "gold_tool": "TMF706_deleteTestDataInstance",
+  "gold_api": "TMF706",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TEST-SVC-9921"
+  }
+ },
+ {
+  "qid": "q0288",
+  "query": "Put action ID 98765 to reissue a bonus credit for the new service catalog offer.",
+  "gold_tool": "TMF658_Update Action",
+  "gold_api": "TMF658",
+  "gold_method": "PUT",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "actionId": "98765"
+  }
+ },
+ {
+  "qid": "q0289",
+  "query": "What are the details for Ai Contract Specification with ID 'TMF915-AC-9001'?",
+  "gold_tool": "TMF915_retrieveAiContractSpecification",
+  "gold_api": "TMF915",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TMF915-AC-9001"
+  }
+ },
+ {
+  "qid": "q0290",
+  "query": "Register John Smith as an individual contact for our service catalog.",
+  "gold_tool": "TMF632_createIndividual",
+  "gold_api": "TMF632",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "name": "John Smith"
+  }
+ },
+ {
+  "qid": "q0291",
+  "query": "Get the details for permission ID PERM-8492 associated with the service catalog management module.",
+  "gold_tool": "TMF672_retrievePermission",
+  "gold_api": "TMF672",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PERM-8492"
+  }
+ },
+ {
+  "qid": "q0292",
+  "query": "Update bill format ID BF-9021 to change the VAT calculation rules for the European service catalog.",
+  "gold_tool": "TMF666_patchBillFormat",
+  "gold_api": "TMF666",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "BF-9021",
+   "billFormat": {
+    "vatCalculationRule": "EU_DIRECTIVE_2023"
+   }
+  }
+ },
+ {
+  "qid": "q0293",
+  "query": "Create a new service test specification named 'VoLTE Latency Check' with a duration of 60 seconds.",
+  "gold_tool": "TMF653_createServiceTestSpecification",
+  "gold_api": "TMF653",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 9,
+  "gold_args": {
+   "name": "VoLTE Latency Check",
+   "duration": "60 seconds"
+  }
+ },
+ {
+  "qid": "q0294",
+  "query": "Show me the first 50 heal records for our network with all fields.",
+  "gold_tool": "TMF664_listHeal",
+  "gold_api": "TMF664",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "*",
+   "offset": "0",
+   "limit": "50"
+  }
+ },
+ {
+  "qid": "q0295",
+  "query": "Update product order O-12345 to add an extra bandwidth package for the enterprise service catalog.",
+  "gold_tool": "TMF622_patchProductOrder",
+  "gold_api": "TMF622",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "O-12345",
+   "productOrder": "extra bandwidth package"
+  }
+ },
+ {
+  "qid": "q0296",
+  "query": "Remove the provisioning artifact with id PROD-9942 from the service catalog.",
+  "gold_tool": "TMF705_deleteProvisioningArtifact",
+  "gold_api": "TMF705",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PROD-9942"
+  }
+ },
+ {
+  "qid": "q0297",
+  "query": "Delete the service catalog record with ID SVC-99821 to remove it from the system.",
+  "gold_tool": "TMF702-ResourceActivationConfiguration_deleteResource",
+  "gold_api": "TMF702-ResourceActivationConfiguration",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 15,
+  "gold_args": {
+   "id": "SVC-99821"
+  }
+ },
+ {
+  "qid": "q0298",
+  "query": "Create a risk assessment for the Vodafone enterprise account role linked to the billing system service catalog.",
+  "gold_tool": "TMF696_createPartyRoleRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "partyRoleRiskAssessment": "Vodafone enterprise account role - Billing System"
+  }
+ },
+ {
+  "qid": "q0299",
+  "query": "Remove serviceLevelObjective id SLA-SLA-009 from our service catalog.",
+  "gold_tool": "TMF657_deleteServiceLevelObjective",
+  "gold_api": "TMF657",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SLA-SLA-009"
+  }
+ },
+ {
+  "qid": "q0300",
+  "query": "Create a new event with topicId 5056 and an event describing a service catalog outage.",
+  "gold_tool": "TMF688-Event_createEvent",
+  "gold_api": "TMF688-Event",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "topicId": "5056",
+   "event": "service catalog outage"
+  }
+ },
+ {
+  "qid": "q0301",
+  "query": "Create a new financial account with ID 'ACC-9982' for the billing service catalog.",
+  "gold_tool": "TMF666_createFinancialAccount",
+  "gold_api": "TMF666",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "financialAccount": "ACC-9982"
+  }
+ },
+ {
+  "qid": "q0302",
+  "query": "Create a new ResourceCategory named 'ManagedNetworkSliceType' with the standard description for network slice resource categories.",
+  "gold_tool": "TMF634_createResourceCategory",
+  "gold_api": "TMF634",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "name": "ManagedNetworkSliceType"
+  }
+ },
+ {
+  "qid": "q0303",
+  "query": "Find resource specifications for the mobile service catalog with an offset of 50 and a limit of 25.",
+  "gold_tool": "TMF908_listResourceSpecification",
+  "gold_api": "TMF908",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "offset": 50,
+   "limit": 25
+  }
+ },
+ {
+  "qid": "q0304",
+  "query": "Remove the AI model specification for predictive maintenance with ID 'AI-PRED-MNT-99' from the service catalog.",
+  "gold_tool": "TMF915_deleteAiModelSpecification",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "AI-PRED-MNT-99"
+  }
+ },
+ {
+  "qid": "q0305",
+  "query": "Update the service catalog provisioning artifact ID 9876 by changing its status to active.",
+  "gold_tool": "TMF705_patchProvisioningArtifact",
+  "gold_api": "TMF705",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "9876"
+  }
+ },
+ {
+  "qid": "q0306",
+  "query": "Get details for process flow ID 'PROF-8842' used in the billing reconciliation service catalog.",
+  "gold_tool": "TMF701_retrieveProcessFlow",
+  "gold_api": "TMF701",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PROF-8842",
+   "fields": ""
+  }
+ },
+ {
+  "qid": "q0307",
+  "query": "Get details for test scenario 98765 to verify its configuration.",
+  "gold_tool": "TMF709_retrieveTestScenario",
+  "gold_api": "TMF709",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "98765"
+  }
+ },
+ {
+  "qid": "q0308",
+  "query": "Create a risk assessment for the 'Enterprise Fibre' service catalog offering linked to the 'Acme Corp' party role.",
+  "gold_tool": "TMF696_createPartyRoleProductOfferingRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "partyRoleProductOfferingRiskAssessment": {
+    "offeringName": "Enterprise Fibre",
+    "partyRoleName": "Acme Corp",
+    "riskLevel": "High",
+    "assessorId": "ENG-9921"
+   }
+  }
+ },
+ {
+  "qid": "q0309",
+  "query": "List the first five geographic locations available in our network inventory.",
+  "gold_tool": "TMF675_retrieveGeographicLocationFind",
+  "gold_api": "TMF675",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": "5",
+   "offset": "0",
+   "fields": "name,latitude,longitude"
+  }
+ },
+ {
+  "qid": "q0310",
+  "query": "Remove the export job with ID 847290 that was stuck in processing for the service catalog.",
+  "gold_tool": "TMF634_deleteExportJob",
+  "gold_api": "TMF634",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "847290"
+  }
+ },
+ {
+  "qid": "q0311",
+  "query": "Please patch service catalog item ID 4509 to change its status to 'deprecated'.",
+  "gold_tool": "TMF730_patchResource",
+  "gold_api": "TMF730",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 14,
+  "gold_args": {
+   "id": "4509",
+   "resource": {
+    "name": "service catalog",
+    "status": "deprecated"
+   }
+  }
+ },
+ {
+  "qid": "q0312",
+  "query": "Update resource pool RP-1001 to increase available capacity by 50 percent.",
+  "gold_tool": "TMF685_patchResourcePool",
+  "gold_api": "TMF685",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "RP-1001",
+   "resourcePool": {
+    "capacity": 50
+   }
+  }
+ },
+ {
+  "qid": "q0313",
+  "query": "Retrieve details for active service promotion codes starting with PROMO2024.",
+  "gold_tool": "TMF671_listPromotion",
+  "gold_api": "TMF671",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "promotionId": "PROMO2024",
+   "fields": "id,description,status"
+  }
+ },
+ {
+  "qid": "q0314",
+  "query": "Retrieve the details for loyalty action ID LAC-99821 associated with customer account 4509.",
+  "gold_tool": "TMF658_Get Action",
+  "gold_api": "TMF658",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "actionId": "LAC-99821"
+  }
+ },
+ {
+  "qid": "q0315",
+  "query": "Initiate a resource order for catalog item 8940 to provision three new copper access points in sector B.",
+  "gold_tool": "TMF652_createResourceOrder",
+  "gold_api": "TMF652",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "resourceOrder": "{\"catalogItemId\": \"8940\", \"quantity\": 3, \"location\": \"sector-B\"}"
+  }
+ },
+ {
+  "qid": "q0316",
+  "query": "Create a service test entry for the fiber outage scenario using the standard IoT Service Management component.",
+  "gold_tool": "TMF914_createServiceTest",
+  "gold_api": "TMF914",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "name": "fiber_outage_test_case_v1"
+  }
+ },
+ {
+  "qid": "q0317",
+  "query": "Show me task flows for process flow ID PF-2024-9876 limited to fields name and status.",
+  "gold_tool": "TMF701_listTaskFlow",
+  "gold_api": "TMF701",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "processFlowId": "PF-2024-9876",
+   "fields": "name,status",
+   "limit": 10
+  }
+ },
+ {
+  "qid": "q0318",
+  "query": "Get the first page of product orders from the service catalog with a limit of 10 entries.",
+  "gold_tool": "TMF622_listProductOrder",
+  "gold_api": "TMF622",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "limit": "10",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0319",
+  "query": "Please remove the digital identity for account ID 987654 from the service catalog.",
+  "gold_tool": "TMF720_deleteDigitalIdentity",
+  "gold_api": "TMF720",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "987654"
+  }
+ },
+ {
+  "qid": "q0320",
+  "query": "Record the test result for service catalog item SC-9001 with status passed.",
+  "gold_tool": "TMF707_createTestCaseResult",
+  "gold_api": "TMF707",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "testCaseResult": {
+    "itemId": "SC-9001",
+    "status": "passed"
+   }
+  }
+ },
+ {
+  "qid": "q0321",
+  "query": "Please update agreement ID AG-9988 by changing the product name to Premium Fiber Plan in the service catalog.",
+  "gold_tool": "TMF651_patchAgreement",
+  "gold_api": "TMF651",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "AG-9988",
+   "agreement": {
+    "productName": "Premium Fiber Plan"
+   }
+  }
+ },
+ {
+  "qid": "q0322",
+  "query": "Remove usage record 84921 from the service catalog.",
+  "gold_tool": "TMF635_deleteUsage",
+  "gold_api": "TMF635",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "84921"
+  }
+ },
+ {
+  "qid": "q0323",
+  "query": "Post a topup balance of 50 credits to the service catalog identifier SVC-9921.",
+  "gold_tool": "TMF654_createTopupBalance",
+  "gold_api": "TMF654",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "topupBalance": "50 credits for service catalog SVC-9921"
+  }
+ },
+ {
+  "qid": "q0324",
+  "query": "Register a usage record for customer CUST-9021's voice service bundle with a current consumption of 450 MB.",
+  "gold_tool": "TMF635_createUsage",
+  "gold_api": "TMF635",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "usage": {
+    "customerId": "CUST-9021",
+    "serviceBundle": "voice-bundle",
+    "consumption": "450MB"
+   }
+  }
+ },
+ {
+  "qid": "q0325",
+  "query": "Remove service problem 450789 from the service catalog.",
+  "gold_tool": "TMF909_deleteServiceProblem",
+  "gold_api": "TMF909",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "450789"
+  }
+ },
+ {
+  "qid": "q0326",
+  "query": "Update partnership specification ID P-9021 to replace the roaming partner list with our new Europe agreements.",
+  "gold_tool": "TMF668_patchPartnershipSpecification",
+  "gold_api": "TMF668",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "P-9021",
+   "partnershipSpecification": {
+    "roamingPartners": [
+     "Vodafone Germany",
+     "Orange France",
+     "Telefonica Spain"
+    ]
+   }
+  }
+ },
+ {
+  "qid": "q0327",
+  "query": "Retrieve the first 50 shopping cart items including their product names and prices.",
+  "gold_tool": "TMF663_listShoppingCart",
+  "gold_api": "TMF663",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "limit": "50",
+   "offset": "0",
+   "fields": "productName,price"
+  }
+ },
+ {
+  "qid": "q0328",
+  "query": "Remove the specific test resource API identified by ID TR-9982 from our staging environment.",
+  "gold_tool": "TMF705_deleteTestResourceAPI",
+  "gold_api": "TMF705",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TR-9982"
+  }
+ },
+ {
+  "qid": "q0329",
+  "query": "Remove quote ID 847290 from the service catalog.",
+  "gold_tool": "TMF648_deleteQuote",
+  "gold_api": "TMF648",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "847290"
+  }
+ },
+ {
+  "qid": "q0330",
+  "query": "Schedule a non-functional test execution for the service catalog named 'BillingServiceV2' with severity 'high'.",
+  "gold_tool": "TMF708_createNonFunctionalTestExecution",
+  "gold_api": "TMF708",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "nonFunctionalTestExecution": {
+    "serviceName": "BillingServiceV2",
+    "severity": "high"
+   }
+  }
+ },
+ {
+  "qid": "q0331",
+  "query": "Remove bill format id 'BILL-FMT-998' from the service catalog to fix the billing engine configuration.",
+  "gold_tool": "TMF666_deleteBillFormat",
+  "gold_api": "TMF666",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "BILL-FMT-998"
+  }
+ },
+ {
+  "qid": "q0332",
+  "query": "Update usage specification ID 4096 to apply new daily volume thresholds for the customer care service catalog.",
+  "gold_tool": "TMF635_patchUsageSpecification",
+  "gold_api": "TMF635",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "4096",
+   "usageSpecification": "new daily volume thresholds"
+  }
+ },
+ {
+  "qid": "q0333",
+  "query": "Find the customer churn performance indicator specification limited to name and description.",
+  "gold_tool": "TMF628_listPerformanceIndicatorSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": [
+    "name",
+    "description"
+   ],
+   "limit": 10,
+   "offset": 0
+  }
+ },
+ {
+  "qid": "q0334",
+  "query": "Get the details for trouble ticket ID TR-99821 involving the core router outage.",
+  "gold_tool": "TMF621_retrieveTroubleTicket",
+  "gold_api": "TMF621",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TR-99821"
+  }
+ },
+ {
+  "qid": "q0335",
+  "query": "Show me the first 50 records of the service catalog with fields id and name.",
+  "gold_tool": "TMF620_listCatalog",
+  "gold_api": "TMF620",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "offset": 0,
+   "limit": 50,
+   "fields": "id,name"
+  }
+ },
+ {
+  "qid": "q0336",
+  "query": "Retrieve the first 10 fields of the service catalog test suite execution objects.",
+  "gold_tool": "TMF708_listTestSuiteExecution",
+  "gold_api": "TMF708",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "fields": [
+    "id",
+    "name"
+   ],
+   "offset": 0,
+   "limit": 10
+  }
+ },
+ {
+  "qid": "q0337",
+  "query": "Remove physical resource ID PR-9847 that is incorrectly listed in the service catalog inventory.",
+  "gold_tool": "TMF639_deletePhysicalResource",
+  "gold_api": "TMF639",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "PR-9847"
+  }
+ },
+ {
+  "qid": "q0338",
+  "query": "Retrieve the details for TestEnvironmentAllocationExecution with ID 45902 in our service catalog.",
+  "gold_tool": "TMF708_retrieveTestEnvironmentAllocationExecution",
+  "gold_api": "TMF708",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "45902"
+  }
+ },
+ {
+  "qid": "q0339",
+  "query": "Please cancel product order #PO-8890 for the enterprise fiber bundle in the service catalog.",
+  "gold_tool": "TMF622_createCancelProductOrder",
+  "gold_api": "TMF622",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "cancelProductOrder": "#PO-8890"
+  }
+ },
+ {
+  "qid": "q0340",
+  "query": "Remove partnership ID PRT-98765 from the system.",
+  "gold_tool": "TMF668_deletePartnership",
+  "gold_api": "TMF668",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PRT-98765"
+  }
+ },
+ {
+  "qid": "q0341",
+  "query": "Remove product stock item ABC123 from the service catalog.",
+  "gold_tool": "TMF687_deleteProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "ABC123"
+  }
+ },
+ {
+  "qid": "q0342",
+  "query": "Get the details for service catalog candidate ID SC-9045.",
+  "gold_tool": "TMF633_retrieveServiceCandidate",
+  "gold_api": "TMF633",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "SC-9045"
+  }
+ },
+ {
+  "qid": "q0343",
+  "query": "Retrieve problems for the service catalog with a limit of five results starting from offset zero.",
+  "gold_tool": "TMF914_listServiceProblem",
+  "gold_api": "TMF914",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "limit": 5,
+   "offset": 0
+  }
+ },
+ {
+  "qid": "q0344",
+  "query": "Remove the service catalog with ID CATALOG-9025.",
+  "gold_tool": "TMF634_deleteResourceCatalog",
+  "gold_api": "TMF634",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "CATALOG-9025"
+  }
+ },
+ {
+  "qid": "q0345",
+  "query": "Remove the service catalog import job identified by ID 8472 before the scheduled maintenance window.",
+  "gold_tool": "TMF662_deleteImportJob",
+  "gold_api": "TMF662",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "8472"
+  }
+ },
+ {
+  "qid": "q0346",
+  "query": "Get the details for service catalog product ID SVC-98765.",
+  "gold_tool": "TMF637_retrieveProduct",
+  "gold_api": "TMF637",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 7,
+  "gold_args": {
+   "id": "SVC-98765",
+   "fields": "*"
+  }
+ },
+ {
+  "qid": "q0347",
+  "query": "Update testCase id TSM-9982 to include the new failure scenario for service catalog item SC-501.",
+  "gold_tool": "TMF704_patchTestCase",
+  "gold_api": "TMF704",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "TSM-9982",
+   "testCase": "new failure scenario"
+  }
+ },
+ {
+  "qid": "q0348",
+  "query": "Remove the test spec with ID 9847 from the service catalog.",
+  "gold_tool": "TMF653_deleteServiceTestSpecification",
+  "gold_api": "TMF653",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 9,
+  "gold_args": {
+   "id": "9847"
+  }
+ },
+ {
+  "qid": "q0349",
+  "query": "Delete the legacy roaming service catalog entity specification with ID RSM-CAT-9941 to clean up our repository.",
+  "gold_tool": "TMF662_deleteEntitySpecification",
+  "gold_api": "TMF662",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "RSM-CAT-9941"
+  }
+ },
+ {
+  "qid": "q0350",
+  "query": "Update ticket TKT-99857 to change its severity to major and status to escalated.",
+  "gold_tool": "TMF621_patchTroubleTicket",
+  "gold_api": "TMF621",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TKT-99857",
+   "troubleTicket": {
+    "severity": "major",
+    "status": "escalated"
+   }
+  }
+ },
+ {
+  "qid": "q0351",
+  "query": "Delete the geographic site with ID 'SITE-NYC-001' from the service catalog.",
+  "gold_tool": "TMF674_deleteGeographicSite",
+  "gold_api": "TMF674",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SITE-NYC-001"
+  }
+ },
+ {
+  "qid": "q0352",
+  "query": "Remove AI contract TMF915-AI-0042 associated with the service catalog.",
+  "gold_tool": "TMF915_deleteAiContract",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "TMF915-AI-0042"
+  }
+ },
+ {
+  "qid": "q0353",
+  "query": "Get the account details for party account ID 45678901.",
+  "gold_tool": "TMF666_retrievePartyAccount",
+  "gold_api": "TMF666",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "45678901"
+  }
+ },
+ {
+  "qid": "q0354",
+  "query": "Clear all alarms for service ID SVC-9928 in region US-East.",
+  "gold_tool": "TMF642_createClearAlarms",
+  "gold_api": "TMF642",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "clearAlarms": {
+    "serviceId": "SVC-9928",
+    "region": "US-East"
+   }
+  }
+ },
+ {
+  "qid": "q0355",
+  "query": "Create a new serviceCandidate for the broadband catalog named 'FiberPlus_50Mbps' with status 'draft'.",
+  "gold_tool": "TMF909_createServiceCandidate",
+  "gold_api": "TMF909",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "serviceCandidate": "FiberPlus_50Mbps"
+  }
+ },
+ {
+  "qid": "q0356",
+  "query": "Retrieve loyalty rule 456 for product spec 987 in the service catalog.",
+  "gold_tool": "TMF658_Get Rule",
+  "gold_api": "TMF658",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "productSpecId": "987",
+   "ruleId": "456"
+  }
+ },
+ {
+  "qid": "q0357",
+  "query": "Show me the provisioning artifacts for the core network service catalog limited to 50 results.",
+  "gold_tool": "TMF705_listProvisioningArtifact",
+  "gold_api": "TMF705",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "limit": 50
+  }
+ },
+ {
+  "qid": "q0358",
+  "query": "Delete the invalid geographic address validation request with ID GEO-VAL-8829 from the administrative system.",
+  "gold_tool": "TMF673_geographicAddressValidationDelete",
+  "gold_api": "TMF673",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "geographicAddressValidationId": "GEO-VAL-8829"
+  }
+ },
+ {
+  "qid": "q0359",
+  "query": "Delete the export job with ID 987654 that I initiated for the service catalog earlier.",
+  "gold_tool": "TMF633_deleteExportJob",
+  "gold_api": "TMF633",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "987654"
+  }
+ },
+ {
+  "qid": "q0360",
+  "query": "Update the test resource API for service catalog item 9847 to change its status to pending.",
+  "gold_tool": "TMF705_patchTestResourceAPI",
+  "gold_api": "TMF705",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "9847",
+   "testResourceAPI": {
+    "status": "pending"
+   }
+  }
+ },
+ {
+  "qid": "q0361",
+  "query": "Show me all active product offerings for our mobile service catalog starting from the fifth record.",
+  "gold_tool": "TMF679_listProductOfferingQualification",
+  "gold_api": "TMF679",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "fields": "*",
+   "offset": 5,
+   "limit": 20
+  }
+ },
+ {
+  "qid": "q0362",
+  "query": "Create a new test suite execution for service catalog item SC-405 using the automated regression plan.",
+  "gold_tool": "TMF708_createTestSuiteExecution",
+  "gold_api": "TMF708",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "testSuiteExecution": "Test Suite Execution for SC-405 Regression Plan"
+  }
+ },
+ {
+  "qid": "q0363",
+  "query": "Get the service catalog resource details with fields for ID and status, starting from offset 0 with a limit of 10.",
+  "gold_tool": "TMF702_listResource",
+  "gold_api": "TMF702",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 14,
+  "gold_args": {
+   "fields": [
+    "id",
+    "status"
+   ],
+   "offset": 0,
+   "limit": 10
+  }
+ },
+ {
+  "qid": "q0364",
+  "query": "Show the details of the last measurement collection job for the core network service catalog.",
+  "gold_tool": "TMF628_listMeasurementCollectionJob",
+  "gold_api": "TMF628",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "id,status,startTime",
+   "offset": 0,
+   "limit": 1
+  }
+ },
+ {
+  "qid": "q0365",
+  "query": "Remove risk assessment ID 8472 for the legacy fiber service offering.",
+  "gold_tool": "TMF696_deleteProductOfferingRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "8472"
+  }
+ },
+ {
+  "qid": "q0366",
+  "query": "Remove the privacy agreement for party ID 54982 from the service catalog.",
+  "gold_tool": "TMF644_deletePartyPrivacyAgreement",
+  "gold_api": "TMF644",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "54982"
+  }
+ },
+ {
+  "qid": "q0367",
+  "query": "Show me the first 10 service specifications from the catalog, excluding fields like id and type.",
+  "gold_tool": "TMF633_listServiceSpecification",
+  "gold_api": "TMF633",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 10,
+  "gold_args": {
+   "limit": "10",
+   "offset": "0",
+   "fields": "-id,-type"
+  }
+ },
+ {
+  "qid": "q0368",
+  "query": "Update resource order ID 89234 by adding the 'network-slice' field with value 'ultra-low-latency'.",
+  "gold_tool": "TMF652_patchResourceOrder",
+  "gold_api": "TMF652",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "89234",
+   "resourceOrder": {
+    "network-slice": "ultra-low-latency"
+   }
+  }
+ },
+ {
+  "qid": "q0369",
+  "query": "Show me the first five network entity specifications from the service catalog.",
+  "gold_tool": "TMF662_listEntitySpecification",
+  "gold_api": "TMF662",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "fields": "*",
+   "offset": "0",
+   "limit": "5"
+  }
+ },
+ {
+  "qid": "q0370",
+  "query": "Remove the rule with ID 'RULE-998877' from the service catalog.",
+  "gold_tool": "TMF915_deleteRule",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "id": "RULE-998877"
+  }
+ },
+ {
+  "qid": "q0371",
+  "query": "Remove the IoT device with ID 'IMEI-8675309' from our service catalog.",
+  "gold_tool": "TMF908_deleteIotDevice",
+  "gold_api": "TMF908",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "IMEI-8675309"
+  }
+ },
+ {
+  "qid": "q0372",
+  "query": "Update the service catalog specification ID SVC-009 to include new 5G network slice parameters in the description.",
+  "gold_tool": "TMF662_patchEntitySpecification",
+  "gold_api": "TMF662",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "SVC-009",
+   "entitySpecification": "new 5G network slice parameters"
+  }
+ },
+ {
+  "qid": "q0373",
+  "query": "Create a service level objective named 'Critical Care Network' with an availability requirement of 99.99%.",
+  "gold_tool": "TMF657_createServiceLevelObjective",
+  "gold_api": "TMF657",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "serviceLevelObjective": "{\"name\": \"Critical Care Network\", \"availability\": \"99.99%\"}"
+  }
+ },
+ {
+  "qid": "q0374",
+  "query": "Please remove resource specification spec_12345 from the service catalog.",
+  "gold_tool": "TMF908_deleteResourceSpecification",
+  "gold_api": "TMF908",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "spec_12345"
+  }
+ },
+ {
+  "qid": "q0375",
+  "query": "Create an alarm on the core router labeled 'RTR-Core-01' with a high severity CPU utilization fault.",
+  "gold_tool": "TMF915_createAlarm",
+  "gold_api": "TMF915",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "alarm": {
+    "name": "CPU Utilization Fault",
+    "severity": "High",
+    "source": "RTR-Core-01"
+   }
+  }
+ },
+ {
+  "qid": "q0376",
+  "query": "Show me the cancellation details for the service catalog order with ID 12345.",
+  "gold_tool": "TMF622_listCancelProductOrder",
+  "gold_api": "TMF622",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "fields": "id,status,cancelReason",
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0377",
+  "query": "Update the service catalog entry with id SC-99821 to change its status to active.",
+  "gold_tool": "TMF702-ResourceActivationConfiguration_patchResource",
+  "gold_api": "TMF702-ResourceActivationConfiguration",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 15,
+  "gold_args": {
+   "id": "SC-99821",
+   "resource": {
+    "status": "active"
+   }
+  }
+ },
+ {
+  "qid": "q0378",
+  "query": "Remove the test result record for case ID 98765 from the service catalog.",
+  "gold_tool": "TMF707_deleteTestCaseResult",
+  "gold_api": "TMF707",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "98765"
+  }
+ },
+ {
+  "qid": "q0379",
+  "query": "Remove topic 5079 from the service catalog.",
+  "gold_tool": "TMF915_deleteTopic",
+  "gold_api": "TMF915",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "5079"
+  }
+ },
+ {
+  "qid": "q0380",
+  "query": "Update the access rights for user role ID usr-role-4492 to include provisioning of new core network services.",
+  "gold_tool": "TMF672_patchUserRole",
+  "gold_api": "TMF672",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "usr-role-4492",
+   "userRole": {
+    "permissions": [
+     "provision_core_network"
+    ]
+   }
+  }
+ },
+ {
+  "qid": "q0381",
+  "query": "Update product stock ID prod-sku-105 for router firmware version v2.4 to show 50 units available.",
+  "gold_tool": "TMF687_patchProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "prod-sku-105",
+   "productStock": {
+    "status": "available",
+    "quantity": 50
+   }
+  }
+ },
+ {
+  "qid": "q0382",
+  "query": "Remove the risk assessment for product order ID PO-8842.",
+  "gold_tool": "TMF696_deleteProductOrderRiskAssessment",
+  "gold_api": "TMF696",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "id": "PO-8842"
+  }
+ },
+ {
+  "qid": "q0383",
+  "query": "Get the details for service catalog ResourceFunction with ID RFR001.",
+  "gold_tool": "TMF664_retrieveResourceFunction",
+  "gold_api": "TMF664",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "RFR001"
+  }
+ },
+ {
+  "qid": "q0384",
+  "query": "Retrieve the first page of service orders from the service catalog with a limit of ten.",
+  "gold_tool": "TMF641_listServiceOrder",
+  "gold_api": "TMF641",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 3,
+  "gold_args": {
+   "limit": "10",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0385",
+  "query": "What is the current stock status for product ID PROD-4589 in the service catalog?",
+  "gold_tool": "TMF687_retrieveCheckProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PROD-4589"
+  }
+ },
+ {
+  "qid": "q0386",
+  "query": "Query the current stock levels for Service Catalog ID SC-8920 and Product SKU SK-445.",
+  "gold_tool": "TMF687_createQueryProductStock",
+  "gold_api": "TMF687",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "queryProductStock": {
+    "serviceCatalogId": "SC-8920",
+    "productSku": "SK-445"
+   }
+  }
+ },
+ {
+  "qid": "q0387",
+  "query": "Remove resource order RO-984756 for the failed fiber upgrade project.",
+  "gold_tool": "TMF652_deleteResourceOrder",
+  "gold_api": "TMF652",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 4,
+  "gold_args": {
+   "id": "RO-984756"
+  }
+ },
+ {
+  "qid": "q0388",
+  "query": "Create a performance indicator specification named 'RAN_Cell_Drop_Rate' for the service catalog to monitor radio access network reliability.",
+  "gold_tool": "TMF628_createPerformanceIndicatorSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "performanceIndicatorSpecification": "RAN_Cell_Drop_Rate"
+  }
+ },
+ {
+  "qid": "q0389",
+  "query": "Show me all geographic addresses in France with exactly 50 results.",
+  "gold_tool": "TMF673_geographicAddressFind",
+  "gold_api": "TMF673",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "fields": [
+    "name",
+    "city"
+   ],
+   "offset": 0,
+   "limit": 50
+  }
+ },
+ {
+  "qid": "q0390",
+  "query": "Retrieve the first page of resource specifications for the service catalog with a limit of fifty.",
+  "gold_tool": "TMF730_listResourceSpecification",
+  "gold_api": "TMF730",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "limit": "50",
+   "offset": "0"
+  }
+ },
+ {
+  "qid": "q0391",
+  "query": "Remove sales lead SL-9982 after the customer confirmed they do not want to proceed with this service catalog offering.",
+  "gold_tool": "TMF699_deleteSalesLead",
+  "gold_api": "TMF699",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "SL-9982"
+  }
+ },
+ {
+  "qid": "q0392",
+  "query": "Update alarm id ALM-9982 to change its state to Cleared in the fault management system.",
+  "gold_tool": "TMF915_patchAlarm",
+  "gold_api": "TMF915",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "ALM-9982",
+   "alarm": {
+    "state": "Cleared"
+   }
+  }
+ },
+ {
+  "qid": "q0393",
+  "query": "Delete the test environment provisioning execution for ID 'EXEC-9982' in the service catalog.",
+  "gold_tool": "TMF708_deleteTestEnvironmentProvisioningExecution",
+  "gold_api": "TMF708",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "EXEC-9982"
+  }
+ },
+ {
+  "qid": "q0394",
+  "query": "Reserve balance needed for new customer on service catalog with ID 12345.",
+  "gold_tool": "TMF654_createReserveBalance",
+  "gold_api": "TMF654",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "reserveBalance": "10.00"
+  }
+ },
+ {
+  "qid": "q0395",
+  "query": "What is the specification ID 5001 for the VoLTE service test?",
+  "gold_tool": "TMF653_retrieveServiceTestSpecification",
+  "gold_api": "TMF653",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 9,
+  "gold_args": {
+   "id": "5001"
+  }
+ },
+ {
+  "qid": "q0396",
+  "query": "Retrieve the first page of party privacy profiles for all customers.",
+  "gold_tool": "TMF644_listPartyPrivacyProfile",
+  "gold_api": "TMF644",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "*",
+   "offset": 0,
+   "limit": 100
+  }
+ },
+ {
+  "qid": "q0397",
+  "query": "What is the status of test case TC-9982 for the service catalog?",
+  "gold_tool": "TMF704_retrieveTestCase",
+  "gold_api": "TMF704",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TC-9982"
+  }
+ },
+ {
+  "qid": "q0398",
+  "query": "Remove the billing cycle specification for service catalog ID 45892.",
+  "gold_tool": "TMF666_deleteBillingCycleSpecification",
+  "gold_api": "TMF666",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "45892"
+  }
+ },
+ {
+  "qid": "q0399",
+  "query": "Create a new service catalog named 'Global-MPLS-2024' with the standard template configuration.",
+  "gold_tool": "TMF633_createServiceCatalog",
+  "gold_api": "TMF633",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "serviceCatalog": "Global-MPLS-2024"
+  }
+ },
+ {
+  "qid": "q0400",
+  "query": "Resolve incident INC-9821 for the metro fiber service using reason code 45 in the service catalog.",
+  "gold_tool": "TMF724_createResolveIncident",
+  "gold_api": "TMF724",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "resolveIncident": "INC-9821"
+  }
+ },
+ {
+  "qid": "q0401",
+  "query": "Retrieve the first page of user profiles for the service catalog with authorization token 'Bearer abc123' and a limit of ten.",
+  "gold_tool": "TMF691_listUserinfo",
+  "gold_api": "TMF691",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "Authorization": "Bearer abc123",
+   "fields": "all",
+   "offset": 0,
+   "limit": 10
+  }
+ },
+ {
+  "qid": "q0402",
+  "query": "Remove change request 89401 scheduled for the core router upgrade.",
+  "gold_tool": "TMF655_deleteChangeRequest",
+  "gold_api": "TMF655",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "89401"
+  }
+ },
+ {
+  "qid": "q0403",
+  "query": "Create a payment of 50 EUR for the service catalog invoice ID INV-2023-998.",
+  "gold_tool": "TMF676_createPayment",
+  "gold_api": "TMF676",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 1,
+  "gold_args": {
+   "payment": {
+    "id": "INV-2023-998",
+    "amount": "50 EUR"
+   }
+  }
+ },
+ {
+  "qid": "q0404",
+  "query": "Update the service catalog ID SVC-CAT-9045 to include the new broadband plan.",
+  "gold_tool": "TMF620_patchCatalog",
+  "gold_api": "TMF620",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "id": "SVC-CAT-9045",
+   "catalog": {
+    "name": "Broadband Plan X"
+   }
+  }
+ },
+ {
+  "qid": "q0405",
+  "query": "Remove the test result record with ID 'TSR-99821' from the service catalog.",
+  "gold_tool": "TMF707_deleteTestSuiteResult",
+  "gold_api": "TMF707",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "TSR-99821"
+  }
+ },
+ {
+  "qid": "q0406",
+  "query": "Show me the provisioning details for test environment execution ID 78901.",
+  "gold_tool": "TMF708_retrieveTestEnvironmentProvisioningExecution",
+  "gold_api": "TMF708",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "78901"
+  }
+ },
+ {
+  "qid": "q0407",
+  "query": "Show me the first five active geographic sites where the field limit is set to five and no offset is applied.",
+  "gold_tool": "TMF674_listGeographicSite",
+  "gold_api": "TMF674",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "fields": "active,location",
+   "offset": "0",
+   "limit": "5"
+  }
+ },
+ {
+  "qid": "q0408",
+  "query": "Record a new service problem for the billing service catalog due to failed payment gateway integration.",
+  "gold_tool": "TMF656_createServiceProblem",
+  "gold_api": "TMF656",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 5,
+  "gold_args": {
+   "serviceProblem": "Billing service catalog"
+  }
+ },
+ {
+  "qid": "q0409",
+  "query": "Remove the query usage consumption record with ID 89201 for the Berlin metro fiber service.",
+  "gold_tool": "TMF677_deleteQueryUsageConsumption",
+  "gold_api": "TMF677",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "89201"
+  }
+ },
+ {
+  "qid": "q0410",
+  "query": "Please transfer balance from prepaid customer ABC123 to our shared pool for the service catalog.",
+  "gold_tool": "TMF654_createTransferBalance",
+  "gold_api": "TMF654",
+  "gold_method": "POST",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "transferBalance": {
+    "sourceAccountId": "ABC123",
+    "destinationAccountId": "SHARED_POOL_01"
+   }
+  }
+ },
+ {
+  "qid": "q0411",
+  "query": "List the subaddresses for geographic address ID US-NY-98765.",
+  "gold_tool": "TMF673_geographicSubAddressFind",
+  "gold_api": "TMF673",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "geographicAddressId": "US-NY-98765"
+  }
+ },
+ {
+  "qid": "q0412",
+  "query": "Update service catalog offering ID 4592 to set its status to 'deprecated' and change the effective date to tomorrow.",
+  "gold_tool": "TMF620_patchProductOffering",
+  "gold_api": "TMF620",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "id": "4592",
+   "productOffering": {
+    "status": "deprecated",
+    "effectiveDate": "2026-01-03"
+   }
+  }
+ },
+ {
+  "qid": "q0413",
+  "query": "Update permission id PERM-8821 to grant the service catalog team read-only access to billing reports.",
+  "gold_tool": "TMF672_patchPermission",
+  "gold_api": "TMF672",
+  "gold_method": "PATCH",
+  "severity": 2,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PERM-8821",
+   "permission": {
+    "role": "service catalog team",
+    "resource": "billing reports",
+    "action": "read-only"
+   }
+  }
+ },
+ {
+  "qid": "q0414",
+  "query": "List non-functional test executions for service order 4590 with a limit of 10 results.",
+  "gold_tool": "TMF708_listNonFunctionalTestExecution",
+  "gold_api": "TMF708",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": true,
+  "n_confusers": 2,
+  "gold_args": {
+   "limit": "10"
+  }
+ },
+ {
+  "qid": "q0415",
+  "query": "Show me the details for promotion ID PROMO-2024-XMAS-SALES.",
+  "gold_tool": "TMF671_retrievePromotion",
+  "gold_api": "TMF671",
+  "gold_method": "GET",
+  "severity": 0,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "PROMO-2024-XMAS-SALES"
+  }
+ },
+ {
+  "qid": "q0416",
+  "query": "Remove the communication message with ID MSG-9942 that was mistakenly sent to the customer regarding their service outage.",
+  "gold_tool": "TMF681_deleteCommunicationMessage",
+  "gold_api": "TMF681",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "MSG-9942"
+  }
+ },
+ {
+  "qid": "q0417",
+  "query": "Remove the performance indicator group specification for ID NGN-SVC-998 from the service catalog.",
+  "gold_tool": "TMF628_deletePerformanceIndicatorGroupSpecification",
+  "gold_api": "TMF628",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": false,
+  "n_confusers": 0,
+  "gold_args": {
+   "id": "NGN-SVC-998"
+  }
+ },
+ {
+  "qid": "q0418",
+  "query": "Remove the legacy broadband service category with ID 'CAT-BROAD-009' from the service catalog.",
+  "gold_tool": "TMF633_deleteServiceCategory",
+  "gold_api": "TMF633",
+  "gold_method": "DELETE",
+  "severity": 3,
+  "confusable": true,
+  "n_confusers": 6,
+  "gold_args": {
+   "id": "CAT-BROAD-009"
+  }
+ }
+]

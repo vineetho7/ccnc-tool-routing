@@ -1,0 +1,122 @@
+{
+ "bm25_5_n1062": {
+  "queries": 420,
+  "errors_total": 163,
+  "errors_named": 68,
+  "named_frac_pct": 41.7,
+  "same_verb_pct": 61.8,
+  "same_sev_pct": 89.7,
+  "same_api_pct": 30.9,
+  "dest_for_dest": 13,
+  "escalations": 1,
+  "deescalations": 6
+ },
+ "dense5_n100": {
+  "queries": 420,
+  "errors_total": 45,
+  "errors_named": 21,
+  "named_frac_pct": 46.7,
+  "same_verb_pct": 76.2,
+  "same_sev_pct": 90.5,
+  "same_api_pct": 14.3,
+  "dest_for_dest": 3,
+  "escalations": 0,
+  "deescalations": 2
+ },
+ "dense5_n1062": {
+  "queries": 420,
+  "errors_total": 154,
+  "errors_named": 110,
+  "named_frac_pct": 71.4,
+  "same_verb_pct": 70.0,
+  "same_sev_pct": 91.8,
+  "same_api_pct": 29.1,
+  "dest_for_dest": 21,
+  "escalations": 1,
+  "deescalations": 8
+ },
+ "dense5_n200": {
+  "queries": 420,
+  "errors_total": 76,
+  "errors_named": 42,
+  "named_frac_pct": 55.3,
+  "same_verb_pct": 73.8,
+  "same_sev_pct": 85.7,
+  "same_api_pct": 16.7,
+  "dest_for_dest": 6,
+  "escalations": 0,
+  "deescalations": 6
+ },
+ "dense5_n400": {
+  "queries": 420,
+  "errors_total": 104,
+  "errors_named": 65,
+  "named_frac_pct": 62.5,
+  "same_verb_pct": 70.8,
+  "same_sev_pct": 92.3,
+  "same_api_pct": 16.9,
+  "dest_for_dest": 12,
+  "escalations": 0,
+  "deescalations": 5
+ },
+ "dense5_n800": {
+  "queries": 420,
+  "errors_total": 135,
+  "errors_named": 87,
+  "named_frac_pct": 64.4,
+  "same_verb_pct": 71.3,
+  "same_sev_pct": 89.7,
+  "same_api_pct": 23.0,
+  "dest_for_dest": 17,
+  "escalations": 1,
+  "deescalations": 8
+ },
+ "dense5_rename_n1062": {
+  "queries": 420,
+  "errors_total": 154,
+  "errors_named": 100,
+  "named_frac_pct": 64.9,
+  "same_verb_pct": 68.0,
+  "same_sev_pct": 91.0,
+  "same_api_pct": 30.0,
+  "dest_for_dest": 16,
+  "escalations": 1,
+  "deescalations": 8
+ },
+ "full_n200": {
+  "queries": 419,
+  "errors_total": 93,
+  "errors_named": 57,
+  "named_frac_pct": 61.3,
+  "same_verb_pct": 86.0,
+  "same_sev_pct": 94.7,
+  "same_api_pct": 21.1,
+  "dest_for_dest": 19,
+  "escalations": 0,
+  "deescalations": 3
+ },
+ "hybrid300_n1062": {
+  "queries": 419,
+  "errors_total": 167,
+  "errors_named": 133,
+  "named_frac_pct": 79.6,
+  "same_verb_pct": 77.4,
+  "same_sev_pct": 94.0,
+  "same_api_pct": 21.1,
+  "dest_for_dest": 41,
+  "escalations": 0,
+  "deescalations": 8
+ },
+ "hybrid_n1062": {
+  "queries": 420,
+  "errors_total": 111,
+  "errors_named": 91,
+  "named_frac_pct": 82.0,
+  "same_verb_pct": 71.4,
+  "same_sev_pct": 91.2,
+  "same_api_pct": 22.0,
+  "dest_for_dest": 19,
+  "escalations": 1,
+  "deescalations": 7
+ }
+}

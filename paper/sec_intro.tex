@@ -1,0 +1,42 @@
+Agentic assistants for network and service operations are converging on the
+same interface: the model is handed a set of tool (API) schemas and must pick
+one and fill its arguments. In telecom this tool set is not small. A single
+operator stack exposes order management, service and resource inventory,
+catalogue, assurance, activation and billing interfaces, each with dozens of
+operations. Published work has established that selection accuracy falls as the
+tool set grows and that retrieving a small candidate set before prompting
+recovers most of the loss~\cite{ragmcp,toollery}. It has also
+established that a small model can internalise a \emph{fixed} tool catalogue by
+fine-tuning, removing schemas from the prompt
+entirely~\cite{qlora_tools}, and, in the opposite direction, that much of
+what looks like a capability gap is really schema-name misalignment that can be
+fixed by renaming tools rather than retraining them~\cite{patool}.
+
+What is missing is a measurement of these choices on a tool catalogue that
+telecom actually has. Existing telecom agent benchmarks evaluate
+troubleshooting and dialogue over small, curated tool sets~\cite{telcoagent,ctbench,wirelessbench};
+generic tool-routing studies use large but semantically scattered catalogues
+where a nearest-neighbour lookup is usually enough. Standardised telecom
+management APIs are different in a specific way: they are generated from a
+common information model, so the same operation verb is applied to entities
+whose names differ by one token. \texttt{listServiceCatalog},
+\texttt{listResourceCatalog}, \texttt{listEntityCatalog} and
+\texttt{listProductCatalog} are four different APIs, four different endpoints
+and four different operational meanings, expressed in almost the same words.
+We call such tools \emph{confusable}, and we show they are the majority case,
+not a corner case.
+
+To our knowledge this is the first tool-routing study on a standardised
+telecom management catalogue at this scale. This work-in-progress paper makes
+three contributions.
+\textbf{(i)} We build a tool catalogue of 1,062 operations harvested from
+79 published TM~Forum Open API specifications~\cite{tmforum}, and define a
+confusability label that is computed from the specifications alone and is
+independent of any retriever: 54.8\,\% of the catalogue is confusable.
+\textbf{(ii)} We evaluate full-schema prompting, dense and lexical retrieval,
+PA-Tool-style renaming, and a LoRA-tuned description-free 1.7B router on the
+same queries, and report accuracy separately for confusable and distinct tools.
+\textbf{(iii)} Because a wrong tool in this domain is not uniformly wrong, we
+report a severity-weighted error cost and a destructive-misfire rate alongside
+accuracy, and we score argument generation separately from selection so the two
+failure modes do not mask each other.
