@@ -23,3 +23,8 @@ src/master.sh           # runs the whole thing
 
 ## Paper
 `paper/confusable_telecom_apis.tex` (IEEEtran conference). Build: `cd paper && ./build.sh`.
+
+## License
+
+Code: MIT (see `LICENSE`). Our queries, labels and results: CC BY 4.0.
+The TM Forum Open API specs under `data/specs/` are redistributed under their original Apache-2.0 license.
